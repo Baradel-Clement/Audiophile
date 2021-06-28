@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Améliorations */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a,
+del,
+ins {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+input,
+button {
+  outline: 0;
+}
+
+* {
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+body {
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 25px;
+  font-family: 'Manrope';
+}
+
+h1, h2, h3, h4, h5, h6, .sub-title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.4285714626312256px;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.1428571939468384px;
+}
+
+h4 {
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 1.7142857313156128px;
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1.2857142686843872px;
+}
+
+.overline {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #D87D4A;
+}
+
+.sub-title {
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 0.9285714030265808px;
+  color: #D87D4A;
+}
+/*# sourceMappingURL=index.css.map */
