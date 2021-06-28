@@ -163,6 +163,7 @@ button {
 input,
 button {
   outline: 0;
+  border: none;
 }
 
 * {
@@ -233,5 +234,93 @@ h6 {
   line-height: 25px;
   letter-spacing: 0.9285714030265808px;
   color: #D87D4A;
+}
+
+.button {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.button2, .button3 {
+  color: black;
+}
+
+.button2 {
+  color: white;
+}
+
+.button1, .button2 {
+  width: 160px;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.button1 {
+  background-color: #D87D4A;
+  color: white;
+}
+
+.button1:hover {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  background-color: #FBAF85;
+}
+
+.button2 {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+}
+
+.button2:hover {
+  background-color: black;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  color: white;
+}
+
+.button3 {
+  background-color: white;
+  width: 70px;
+  height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.button3 > span {
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button3:hover {
+  color: #D87D4A;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 /*# sourceMappingURL=index.css.map */

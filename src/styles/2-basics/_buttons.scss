@@ -1,0 +1,55 @@
+.button1, .button2 {
+  width: 160px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.button1 {
+  background-color: $orange;
+  color: white;
+  
+}
+
+.button1:hover {
+  transition: 0.2s ease-in-out;
+  background-color: $light-orange;
+}
+
+.button2 {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+}
+
+.button2:hover {
+  background-color: black;
+  transition: 0.2s ease-in-out;
+  color: white;
+}
+
+.button3 {
+  background-color: white;
+  width: 70px;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+}
+
+.button3 > span {
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button3:hover {
+  color: $orange;
+  transition: 0.2s ease-in-out;
+}

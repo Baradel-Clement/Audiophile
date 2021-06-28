@@ -1,8 +1,9 @@
 import React from 'react';
+import Button from '../Button';
 
 const App = () => (
   <div className="app">
-    <h1>React App</h1>
+    <Button content="Shop" type="button3" />
   </div>
 );
 

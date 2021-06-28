@@ -69,3 +69,19 @@ h6 {
   letter-spacing: 0.9285714030265808px;
   color: $orange;
 }
+
+.button {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.button2, .button3 {
+  color: black;
+}
+
+.button2 {
+  color: white;
+}
