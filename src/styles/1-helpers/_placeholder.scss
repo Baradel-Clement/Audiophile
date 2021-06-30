@@ -11,9 +11,19 @@
       align-items: center;
     }
   
+    %flex-start-center {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+  
     %back-image {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+    }
+
+    %transition {
+      transition: 0.2s ease-in-out;
     }
 }

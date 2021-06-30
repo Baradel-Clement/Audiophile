@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.2s ease-in-out;
   margin-top: 20px;
+  @extend %transition;
   margin-left: 20px;
 }
 
@@ -16,8 +16,8 @@
 }
 
 .button1:hover {
-  transition: 0.2s ease-in-out;
   background-color: $light-orange;
+  @extend %transition;
 }
 
 .button2 {
@@ -28,18 +28,18 @@
 
 .button2:hover {
   background-color: black;
-  transition: 0.2s ease-in-out;
   color: white;
+  @extend %transition;
 }
 
 .button3 {
-  background-color: white;
   width: 70px;
   height: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 0.2s ease-in-out;
+  @extend %transition;
+  opacity: 0.5;
 }
 
 .button3 > span {
@@ -51,5 +51,6 @@
 
 .button3:hover {
   color: $orange;
-  transition: 0.2s ease-in-out;
+  @extend %transition;
+  opacity: 1;
 }

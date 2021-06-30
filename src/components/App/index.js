@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from '../Button';
+import NavBar from '../NavBar';
 
 const App = () => (
   <div className="app">
-    <Button content="Shop" type="button3" />
+    <NavBar />
   </div>
 );
 
