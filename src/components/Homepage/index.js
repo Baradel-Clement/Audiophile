@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Categories from '../Categories';
+
 const Homepage = () => (
   <div className="Homepage">
     <div className="Homepage-Hero">
@@ -15,6 +17,7 @@ const Homepage = () => (
         <div className="Homepage-Hero-image" />
       </div>
     </div>
+    <Categories marginTop={120} />
   </div>
 );
 

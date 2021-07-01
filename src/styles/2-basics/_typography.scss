@@ -103,6 +103,19 @@ h6 {
   text-transform: uppercase;
 }
 
+.Categories-category-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 1.2857142686843872px;
+}
+
+@media screen and (max-width: 1160px) {
+  .Categories-category-title {
+    font-size: 15px;
+  }
+}
+
 @media screen and (max-width: 763px) {
   h1 {
     font-size: 36px;

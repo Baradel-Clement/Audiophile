@@ -1,3 +1,8 @@
+.Homepage {
+  @extend %flex-center-center;
+  flex-flow: column;
+}
+
 .Homepage-Hero {
     width: 100%;
     height: 632px;
