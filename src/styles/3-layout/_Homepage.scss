@@ -3,6 +3,8 @@
   flex-flow: column;
 }
 
+// ---- Hero ----
+
 .Homepage-Hero {
     width: 100%;
     height: 632px;
@@ -131,5 +133,274 @@
     height: 510px;
     position: absolute;
     top: 0px;
+  }
+}
+
+
+// ---- Headline Product ----
+
+.HeadlineProducts {
+  width: 1110px;
+  height: 1296px;
+  @extend %flex-between-center;
+  flex-flow: column;
+  margin-top: 168px;
+}
+
+// -- ZX9 -- 
+
+.HeadlineProducts-ZX9 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: $orange;
+  border-radius: 8px;
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+  position: relative;
+}
+
+.HeadlineProducts-ZX9-illu {
+  width: 410px;
+  height: 493px;
+  background-image: url(/src/assets/AudiophileAssets/home/desktop/image-speaker-zx9.png);
+  @extend %back-image;
+  position: relative;
+  bottom: -12px;
+  margin-left: 118px;
+  z-index: 2;
+}
+
+#HeadlineProducts-ZX9-circles {
+  position: absolute;
+  z-index: 1;
+  top: -33px;
+  left: -151px;
+}
+
+.HeadlineProducts-ZX9-desc {
+  width: 349px;
+  height: 303px;
+  @extend %flex-between-start;
+  flex-flow: column;
+  margin: 0px 95px 124px 0px;
+  position: relative;
+  z-index: 2;
+}
+
+.HeadlineProducts-ZX9-desc > h1 {
+  color: white;
+  width: 261px;
+}
+
+.HeadlineProducts-ZX9-desc > p {
+  color: white;
+  width: 345px;
+}
+
+// -- ZX7 --
+
+.HeadlineProducts-ZX7 {
+  @extend %flex-start-center;
+  background-image: url(/src/assets/AudiophileAssets/home/desktop/image-speaker-zx7.jpg);
+  @extend %back-image;
+  border-radius: 8px;
+  width: 100%;
+  height: 320px;
+  margin: 48px 0px;
+}
+
+.HeadlineProducts-ZX7-desc {
+  width: 204px;
+  height: 118px;
+  @extend %flex-between-start;
+  flex-flow: column;
+  margin-left: 95px;
+}
+
+// -- YX1 --
+
+.HeadlineProducts-YX1 {
+  @extend %flex-between-center;
+  width: 100%;
+  height: 320px;
+}
+
+.HeadlineProducts-YX1-illu {
+  background-image: url(/src/assets/AudiophileAssets/home/desktop/image-earphones-yx1.jpg);
+  @extend %back-image;
+  border-radius: 8px;
+  width: 540px;
+  height: 320px;
+}
+
+.HeadlineProducts-YX1-desc {
+  background-color: $grey;
+  @extend %flex-start-center;
+  border-radius: 8px;
+  width: 540px;
+  height: 320px;
+}
+
+.HeadlineProducts-YX1-desc-wrap {
+  width: 247px;
+  height: 127px;
+  @extend %flex-between-start;
+  flex-flow: column;
+  margin-left: 95px;
+}
+
+@media screen and (max-width: 1160px) {
+  .HeadlineProducts {
+    width: 689px;
+    height: 1424px;
+  }
+  
+  // -- ZX9 -- 
+  
+  .HeadlineProducts-ZX9 {
+    align-items: center;
+    flex-flow: column;
+    height: 720px;
+  }
+  
+  .HeadlineProducts-ZX9-illu {
+    width: 197px;
+    height: 237px;
+    background-image: url(/src/assets/AudiophileAssets/home/tablet/image-speaker-zx9.png);
+    bottom: unset;
+    margin-left: 0px;
+    margin-top: 52px;
+  }
+  
+  #HeadlineProducts-ZX9-circles {
+    position: absolute;
+    z-index: 1;
+    top: -310px;
+    left: unset;
+  }
+  
+  .HeadlineProducts-ZX9-desc {
+    align-items: center;
+    margin: 0px 0px 64px 0px;
+  }
+
+  .HeadlineProducts-ZX9-desc > * {
+    margin: unset auto;
+    text-align: center;
+  }
+  
+  .HeadlineProducts-ZX9-desc > h1 {
+    color: white;
+    width: 100%;
+  }
+  
+  .HeadlineProducts-ZX9-desc > p {
+    color: white;
+    width: 345px;
+  }
+
+  // -- ZX7 --
+
+  .HeadlineProducts-ZX7 {
+    background-image: url(/src/assets/AudiophileAssets/home/tablet/image-speaker-zx7.jpg);
+    margin: 32px 0px;
+  }
+
+  .HeadlineProducts-ZX7-desc {
+    margin-left: 62px;
+  }
+
+  // -- YX1 --
+
+  .HeadlineProducts-YX1-illu {
+    background-image: url(/src/assets/AudiophileAssets/home/tablet/image-earphones-yx1.jpg);
+    width: 339px;
+  }
+
+  .HeadlineProducts-YX1-desc {
+    width: 339px;
+  }
+
+  .HeadlineProducts-YX1-desc-wrap {
+    height: 118px;
+    margin-left: 41px;
+  }
+}
+
+@media screen and (max-width: 763px) {
+  .HeadlineProducts {
+    width: 327px;
+    height: 1392px;
+    margin-top: 120px;
+  }
+  
+  // -- ZX9 -- 
+  
+  .HeadlineProducts-ZX9 {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+  }
+  
+  .HeadlineProducts-ZX9-illu {
+    width: 172px;
+    height: 207px;
+    background-image: url(/src/assets/AudiophileAssets/home/mobile/image-speaker-zx9.png);
+    margin-top: 55px;
+  }
+  
+  #HeadlineProducts-ZX9-circles {
+    top: -216px;
+  }
+  
+  .HeadlineProducts-ZX9-desc {
+    width: 280px;
+    height: 251px;
+    margin: 0px 0px 55px 0px;
+  }
+  
+  .HeadlineProducts-ZX9-desc > h1 {
+    width: 190px;
+  }
+  
+  .HeadlineProducts-ZX9-desc > p {
+    width: 280px;
+  }
+
+  // -- ZX7 --
+
+  .HeadlineProducts-ZX7 {
+    background-image: url(/src/assets/AudiophileAssets/home/mobile/image-speaker-zx7.jpg);
+    margin: 24px 0px;
+  }
+
+  .HeadlineProducts-ZX7-desc {
+    margin-left: 24px;
+  }
+
+  // -- YX1 --
+
+  .HeadlineProducts-YX1 {
+    @extend %flex-between-center;
+    flex-flow: column;
+    height: 424px;
+  }
+
+  .HeadlineProducts-YX1-illu {
+    background-image: url(/src/assets/AudiophileAssets/home/mobile/image-earphones-yx1.jpg);
+    width: 327px;
+    height: 200px;
+  }
+
+  .HeadlineProducts-YX1-desc {
+    width: 327px;
+    height: 200px;
+  }
+
+  .HeadlineProducts-YX1-desc-wrap {
+    height: 118px;
+    margin-left: 24px;
   }
 }

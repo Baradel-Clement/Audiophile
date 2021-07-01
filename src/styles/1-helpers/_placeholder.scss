@@ -17,6 +17,12 @@
       align-items: center;
     }
 
+    %flex-center-start {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
     %flex-between-start {
       display: flex;
       justify-content: space-between;

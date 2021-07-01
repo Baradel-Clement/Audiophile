@@ -20,7 +20,7 @@
 .button2 {
   border: 1px solid black;
   color: black;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .button2:hover {
@@ -50,4 +50,19 @@
   color: $orange;
   @extend %transition;
   opacity: 1;
+}
+
+.button2-reverse {
+  background-color: black;
+  border: none;
+  width: 160px;
+  height: 48px;
+  color: white;
+  @extend %flex-center-center;
+  @extend %transition;
+}
+
+.button2-reverse:hover {
+  @extend %transition;
+  background-color: #4C4C4C;
 }
