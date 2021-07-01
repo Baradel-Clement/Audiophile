@@ -1,136 +1,136 @@
 
 .NavBar {
-    background-color: #0E0E0E;
-    height: 96px;
-    display: flex;
-    justify-content: center;
+  background-color: #0E0E0E;
+  height: 96px;
+  display: flex;
+  justify-content: center;
 }
 
 .NavBar-wrap {
-    margin-top: 32px;
-    @extend %flex-between-center;
-    width: 1110px;
-    height: 28px;
-    position: relative;
+  margin-top: 32px;
+  @extend %flex-between-center;
+  width: 1110px;
+  height: 28px;
+  position: relative;
 }
 
 .NavBar-wrap::after {
-    content: '';
-    background-color: white;
-    opacity: 0.2;
-    position: absolute;
-    bottom: -36px;
-    width: 100%;
-    height: 1px;
+  content: '';
+  background-color: white;
+  opacity: 0.2;
+  position: absolute;
+  bottom: -36px;
+  width: 100%;
+  height: 1px;
 }
 
 .iconBurger {
-    display: none;
-    cursor: pointer;
+  display: none;
+  cursor: pointer;
 }
 
 .NavBar-links {
-    @extend %flex-between-center;
-    width: 427px;
+  @extend %flex-between-center;
+  width: 427px;
 }
 
 .NavBar-link { 
-    @extend %transition;
+  @extend %transition;
 }
 .NavBar-link:hover { 
-    @extend %transition;
-    color: $orange;
+  @extend %transition;
+  color: $orange;
 }
 
 .Menu {
-    width: 100%;
-    background-color: white;
-     position: absolute;
-    top: 90px;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  background-color: white;
+    position: absolute;
+  top: 90px;
+  display: flex;
+  justify-content: center;
 }
 
 .Menu-categories {
-    width: 700px;
-    height: 450px;
-    @extend %flex-center-center;
-    flex-flow: row wrap;
-    margin-top: 84px;
+  width: 700px;
+  height: 450px;
+  @extend %flex-center-center;
+  flex-flow: row wrap;
+  margin-top: 84px;
 }
 
 .Menu-category {
-    width: 327px;
-    height: 165px;
-    @extend %flex-start-center;
-    flex-flow: column;
-    background-color: $grey;
-    border-radius: 8px;
-    margin: 0px 11px 0px 11px;
-    position: relative;
+  width: 327px;
+  height: 165px;
+  @extend %flex-start-center;
+  flex-flow: column;
+  background-color: $grey;
+  border-radius: 8px;
+  margin: 0px 11px 0px 11px;
+  position: relative;
 }
 
 .Menu-category > img {
-    position: absolute;
-    top: -50%;
-    transform: translateY(25%);
+  position: absolute;
+  top: -50%;
+  transform: translateY(25%);
 }
 
 .Menu-category > p {
-    margin-top: 88px;
+  margin-top: 88px;
 }
 
 .Menu-category > button {
-    margin-top: 17px;
+  margin-top: 17px;
 }
 
 .Menu-category > .Menu-category-shadow {
-    position: absolute;
-    top: 42px;
-    width: 94.89px;
-    height: 14px;
-    background: #000000;
-    border-radius: 50%;
-    filter: blur(12px);
+  position: absolute;
+  top: 42px;
+  width: 94.89px;
+  height: 14px;
+  background: #000000;
+  border-radius: 50%;
+  filter: blur(12px);
 }
 
 @media screen and (max-width: 1160px) {
-    .NavBar-links {
-        display: none;
-    }
+  .NavBar-links {
+      display: none;
+  }
 
-    .NavBar {
-        height: 90px;
-    }
+  .NavBar {
+      height: 90px;
+  }
 
-    .NavBar-wrap::after {
-        bottom: -32px;
-    }
-        
-    .NavBar-wrap {
-        width: 689px;
-        height: 25px;
-    }
-    
-    .iconBurger {
-        display: block;
-    }
+  .NavBar-wrap::after {
+      bottom: -32px;
+  }
+      
+  .NavBar-wrap {
+      width: 689px;
+      height: 25px;
+  }
+  
+  .iconBurger {
+      display: block;
+  }
 }
 
 @media screen and (max-width: 762px) {
-    .NavBar-wrap {
-        width: 93.6%;
-        height: 25px;
-    }
+  .NavBar-wrap {
+      width: 93.6%;
+      height: 25px;
+  }
 }
 
-@media screen and (max-width: 698px) { 
-    .Menu-categories {
-        height: 761px;
-        margin-top: 0px;
-    }
+@media screen and (max-width: 698px) {
+  .Menu-categories {
+      height: 761px;
+      margin-top: 0px;
+  }
 
-    .Menu-categories > .Menu-category:first-child {
-        margin-top: 37px;
-    }
+  .Menu-categories > .Menu-category:first-child {
+      margin-top: 37px;
+  }
 }

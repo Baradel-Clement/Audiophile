@@ -1,0 +1,130 @@
+.Homepage-Hero {
+    width: 100%;
+    height: 632px;
+    background-color: #0E0E0E;
+    @extend %flex-center-center;
+}
+
+.Homepage-Hero-wrap {
+    width: 1110px;
+    @extend %flex-between-start;
+    height: 632px;
+}
+
+.Homepage-Hero-desc {
+  width: 396px;
+  margin-top: 128px;
+}
+
+.Homepage-Hero-desc > p.overline {
+  color: white;
+  opacity: 0.5;
+  margin-bottom: 24px;
+}
+
+.Homepage-Hero-desc > h1 {
+  color: white;
+  margin-bottom: 24px;
+}
+
+.Homepage-Hero-desc > p {
+  opacity: 0.75;
+  color: white;
+  width: 349px;
+  margin-bottom: 40px;
+}
+
+.Homepage-Hero-image {
+    background-image: url(/src/assets/AudiophileAssets/home/desktop/heroBackgroun.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 709px;
+    height: 632px;
+}
+
+
+@media screen and (max-width: 1160px) {
+  .Homepage-Hero {
+    height: 639px;
+  }
+
+  .Homepage-Hero-wrap {
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    height: 639px;
+    position: relative;
+  }
+
+  .Homepage-Hero-desc {
+    width: 396px;
+    margin-top: 126px;
+    height: 346px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .Homepage-Hero-desc > * {
+    margin: 0px auto;
+    text-align: center;
+  }
+
+  .Homepage-Hero-image {
+    background-image: url(/src/assets/AudiophileAssets/home/tablet/image-header.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width: 100%;
+    height: 639px;
+    position: absolute;
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 762px) {
+  .NavBar {
+    background-color: #1A1A1A;
+  }
+
+  .Homepage-Hero {
+    height: 510px;
+    background-color: #1A1A1A;
+  }
+
+  .Homepage-Hero-wrap {
+    justify-content: center;
+    align-items: flex-start;
+    height: 510px;
+    position: relative;
+  }
+
+  .Homepage-Hero-desc {
+    width: 328px;
+    margin-top: 108px;
+    height: 290px;
+  }
+
+  .Homepage-Hero-desc > p.overline {
+    margin-bottom: 16px;
+  }
+  
+  .Homepage-Hero-desc > h1 {
+    margin-bottom: 24px;
+  }
+  
+  .Homepage-Hero-desc > p {
+    width: 321px;
+    margin-bottom: 28px;
+  }
+
+  .Homepage-Hero-image {
+    background-image: url(/src/assets/AudiophileAssets/home/mobile/image-header.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width: 100%;
+    height: 510px;
+    position: absolute;
+    top: 0px;
+  }
+}
