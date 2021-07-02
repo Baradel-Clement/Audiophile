@@ -110,6 +110,10 @@ h6 {
   letter-spacing: 1.2857142686843872px;
 }
 
+.colorOrange {
+  color: $orange;
+}
+
 @media screen and (max-width: 1160px) {
   .Categories-category-title {
     font-size: 15px;
@@ -121,5 +125,11 @@ h6 {
     font-size: 36px;
     line-height: 40px;
     letter-spacing: 1.29px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 1px;
   }
 }

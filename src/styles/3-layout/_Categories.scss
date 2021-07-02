@@ -3,6 +3,9 @@
   height: 284px;
   @extend %flex-between-center;
 }
+#CategoriesHomepage {
+  margin-top: 120px;
+}
 
 .Categories-category {
   background-color: $grey;
@@ -47,6 +50,9 @@
   .Categories {
     width: 689px;
     height: 217px;
+  }
+  #CategoriesHomepage {
+    margin-top: 96px;
   }
   
   .Categories-category {

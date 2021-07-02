@@ -11,8 +11,8 @@ import earphonesCategoryIconMobile from '../../assets/AudiophileAssets/categorie
 
 import rightArrow from '../../assets/AudiophileAssets/shared/desktop/icon-arrow-right.svg';
 
-const Categories = ({ marginTop }) => (
-  <div className="Categories" style={{ marginTop }}>
+const Categories = ({ id }) => (
+  <div className="Categories" id={id}>
     <div className="Categories-category">
       <img src={headphonesCategoryIconDesktop} alt="headphonesCategoryIconDesktop" />
       <img src={headphonesCategoryIconMobile} alt="headphonesCategoryIconMobile" />
@@ -38,7 +38,7 @@ const Categories = ({ marginTop }) => (
 );
 
 Categories.propTypes = {
-  marginTop: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Categories;

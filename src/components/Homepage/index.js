@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Categories from '../Categories';
+import Best from '../Best';
 
 const Homepage = () => (
   <div className="Homepage">
@@ -17,7 +18,7 @@ const Homepage = () => (
         <div className="Homepage-Hero-image" />
       </div>
     </div>
-    <Categories marginTop={120} />
+    <Categories id="CategoriesHomepage" />
     <div className="HeadlineProducts">
       <div className="HeadlineProducts-ZX9">
         <div className="HeadlineProducts-ZX9-illu" />
@@ -46,6 +47,7 @@ const Homepage = () => (
         </div>
       </div>
     </div>
+    <Best id="HomepageBest" />
   </div>
 );
 

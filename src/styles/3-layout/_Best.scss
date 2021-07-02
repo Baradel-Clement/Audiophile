@@ -1,0 +1,78 @@
+.Best {
+    width: 1110px;
+    height: 588px;
+    @extend %flex-between-center;
+}
+#HomepageBest {
+    margin-top: 200px;
+}
+
+.Best-desc {
+    width: 445px;
+    height: 295px;
+    @extend %flex-between-start;
+    flex-flow: column;
+}
+
+.Best-desc > p {
+    opacity: 0.5;
+}
+
+.Best-illu {
+    background-image: url(/src/assets/AudiophileAssets/shared/desktop/image-best-gear.jpg);
+    @extend %back-image;
+    width: 540px;
+    height: 588px;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 1160px) {
+    .Best {
+        width: 689px;
+        height: 633px;
+        flex-flow: column-reverse;
+    }
+    #HomepageBest {
+        margin-top: 96px;
+    }
+    
+    .Best-desc {
+        width: 573px;
+        height: 270px;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    .Best-desc > * {
+        text-align: center;
+    }
+    
+    .Best-illu {
+        background-image: url(/src/assets/AudiophileAssets/shared/tablet/image-best-gear.jpg);
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 763px) {
+    .Best {
+        width: 327px;
+        height: 698px;
+    }
+    #HomepageBest {
+        margin-top: 120px;
+    }
+    
+    .Best-desc {
+        width: 327px;
+        height: 358px;
+    }
+
+    .Best-desc > p {
+        height: 250px;
+    }
+    
+    .Best-illu {
+        background-image: url(/src/assets/AudiophileAssets/shared/mobile/image-best-gear.jpg);
+    }
+}
