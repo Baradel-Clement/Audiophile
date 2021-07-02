@@ -1,0 +1,168 @@
+.Footer {
+    width: 100%;
+    height: 365px;
+    background-color: $light-black;
+    @extend %flex-center-end;
+    margin-top: 200px;
+}
+
+.Footer-wrap {
+    width: 1110px;
+    height: 242px;
+    position: relative;
+    @extend %flex-between-start;
+    margin-bottom: 48px;
+}
+
+.orangeRectangle {
+    width: 101px;
+    height: 4px;
+    background-color: $orange;
+    position: absolute;
+    top: -75px;
+    left: 0px;
+}
+
+.Footer-nav {
+    width: 427px;
+    height: 25px;
+    @extend %flex-between-center;
+}
+
+.Footer-text {
+    color: white;
+    position: absolute;
+    opacity: 0.5;
+    bottom: 0px;
+    left: 0px;
+    width: 540px;
+    height: 181px;
+    @extend %flex-between-start;
+    flex-flow: column;
+}
+
+.Footer-text > p:nth-child(1) {
+    width: 520px;
+}
+
+.Footer-text > p:nth-child(2) {
+    font-weight: 700;
+}
+
+.Footer-social {
+    width: 104px;
+    height: 24px;
+    @extend %flex-between-center;
+    position: absolute;
+    bottom: 66px;
+    right: 0px;
+}
+
+.Footer-social-icon {
+    @extend %back-image;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.Footer-social-facebook {
+    background-image: url(/src/assets/AudiophileAssets/shared/desktop/icon-facebook.svg);
+}
+.Footer-social-twitter {
+    height: 20px;
+    background-image: url(/src/assets/AudiophileAssets/shared/desktop/icon-twitter.svg);
+}
+.Footer-social-insta {
+    background-image: url(/src/assets/AudiophileAssets/shared/desktop/icon-instagram.svg);
+}
+.Footer-social-facebook:hover {
+    background-image: url(/src/assets/AudiophileAssets/shared/desktop/icon-facebook-color.svg);
+}
+.Footer-social-twitter:hover {
+    background-image: url(/src/assets/AudiophileAssets/shared/desktop/icon-twitter-color.svg);
+}
+.Footer-social-insta:hover {
+    background-image: url(/src/assets/AudiophileAssets/shared/desktop/icon-instagram-color.svg);
+}
+
+@media screen and (max-width: 1160px) {
+    .Footer {
+        height: 400px;
+    }
+    
+    .Footer-wrap {
+        width: 689px;
+        height: 294px;
+        margin-bottom: 46px;
+        flex-flow: column;
+    }
+    
+    .orangeRectangle {
+        top: -60px;
+    }
+    
+    .Footer-nav {
+        margin-bottom: 212px;
+    }
+
+    .Footer-text {
+        width: 689px;
+        height: 180px;
+    }
+    
+    .Footer-text > p:nth-child(1) {
+        width: 520px;
+    }
+    
+    .Footer-social {
+        bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 763px) {
+    .Footer {
+        height: 654px;
+    }
+    
+    .Footer-wrap {
+        width: 327px;
+        height: 564px;
+        margin-bottom: 38px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .orangeRectangle {
+        top: -52px;
+        left: unset;
+    }
+    
+    .Footer-nav {
+        margin-bottom: 0px;
+        margin-top: 48px;
+        width: 108px;
+        height: 148px;
+        flex-flow: column;
+    }
+
+    .Footer-text {
+        width: 327px;
+        height: 223px;
+        left: unset;
+        bottom: 72px;
+    }
+    
+    .Footer-text > * {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .Footer-text > p:nth-child(1) {
+        width: 100%;
+    }
+    
+    .Footer-social {
+        bottom: 0px;
+        right: unset;
+    }
+}

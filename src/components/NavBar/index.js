@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+
 import logo from '../../assets/AudiophileAssets/shared/desktop/logo.svg';
 import iconCart from '../../assets/AudiophileAssets/shared/desktop/icon-cart.svg';
 import iconBurger from '../../assets/AudiophileAssets/shared/tablet/icon-hamburger.svg';
@@ -22,10 +23,10 @@ const NavBar = () => {
             </NavLink>
           </div>
           <ul className="NavBar-links">
-            <NavLink to="/" exact><li className="NavBar-link">HOME</li></NavLink>
-            <NavLink to="/headphones" exact><li className="NavBar-link">HEADPHONES</li></NavLink>
-            <NavLink to="/speakers" exact><li className="NavBar-link">SPEAKERS</li></NavLink>
-            <NavLink to="/earphones" exact><li className="NavBar-link">EARPHONES</li></NavLink>
+            <NavLink to="/" exact><li className="NavBar-link Nav-link">HOME</li></NavLink>
+            <NavLink to="/headphones" exact><li className="NavBar-link Nav-link">HEADPHONES</li></NavLink>
+            <NavLink to="/speakers" exact><li className="NavBar-link Nav-link">SPEAKERS</li></NavLink>
+            <NavLink to="/earphones" exact><li className="NavBar-link Nav-link">EARPHONES</li></NavLink>
           </ul>
           <div className="NavBar-cart">
             <img src={iconCart} alt="cart" />

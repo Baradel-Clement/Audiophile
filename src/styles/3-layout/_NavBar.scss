@@ -34,10 +34,10 @@
   width: 427px;
 }
 
-.NavBar-link { 
+.Nav-link { 
   @extend %transition;
 }
-.NavBar-link:hover { 
+.Nav-link:hover { 
   @extend %transition;
   color: $orange;
 }
