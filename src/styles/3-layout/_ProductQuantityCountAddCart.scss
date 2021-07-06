@@ -1,0 +1,13 @@
+.Product-main-desc-addCart-count {
+    background-color: $grey;
+    width: 120px;
+    height: 48px;
+    @extend %flex-between-center;
+}
+
+.Product-main-desc-addCart-count-minusPlus {
+    width: 40px;
+    height: 48px;
+    @extend %flex-center-center;
+    pointer-events: all;
+}

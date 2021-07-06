@@ -8,7 +8,7 @@
 
 body {
   font-size: 15px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 25px;
   font-family: 'Manrope';
 }
@@ -114,13 +114,30 @@ h6 {
   color: $orange;
 }
 
+.countBoxList {
+  font-weight: 700;
+}
+
+.Product-main-desc-addCart-count-countFont, .Product-main-desc-addCart-count-quantityFont {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+
 @media screen and (max-width: 1160px) {
   .Categories-category-title {
     font-size: 15px;
   }
+
+  h2.littleH2 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 1px;
+  }
 }
 
-@media screen and (max-width: 763px) {
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 36px;
     line-height: 40px;
@@ -131,5 +148,11 @@ h6 {
     font-size: 28px;
     line-height: 38px;
     letter-spacing: 1px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.8571428656578064px;
   }
 }

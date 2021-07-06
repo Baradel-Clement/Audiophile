@@ -3,6 +3,9 @@
     height: 588px;
     @extend %flex-between-center;
 }
+#CategoryBest, #ProductBest {
+    margin-top: 160px;
+}
 #HomepageBest {
     margin-top: 200px;
 }
@@ -35,6 +38,9 @@
     #HomepageBest {
         margin-top: 96px;
     }
+    #CategoryBest, #ProductBest {
+        margin-top: 120px;
+    }
     
     .Best-desc {
         width: 573px;
@@ -54,7 +60,7 @@
     }
 }
 
-@media screen and (max-width: 763px) {
+@media screen and (max-width: 768px) {
     .Best {
         width: 327px;
         height: 698px;
