@@ -9,6 +9,7 @@ const Cart = ({
   cleanCart,
   addQuantityProductInCart,
   removeQuantityProductInCart,
+  setDisplayCart,
 }) => (
   <div className="Cart">
     <div className="Cart-wrap">
@@ -55,7 +56,7 @@ const Cart = ({
           <p>TOTAL</p>
           <h6>$ {totalPrice}</h6>
         </div>
-        <button className="button button1 Cart-checkout-button" type="button"><NavLink to="/checkout" exact>CHECKOUT</NavLink></button>
+        <button onClick={() => setDisplayCart(false)} className="button button1 Cart-checkout-button" type="button"><NavLink to="/checkout" exact>CHECKOUT</NavLink></button>
       </div>
     </div>
   </div>
@@ -76,6 +77,7 @@ Cart.propTypes = {
   cleanCart: PropTypes.func.isRequired,
   addQuantityProductInCart: PropTypes.func.isRequired,
   removeQuantityProductInCart: PropTypes.func.isRequired,
+  setDisplayCart: PropTypes.func.isRequired,
 };
 
 export default Cart;

@@ -7,6 +7,7 @@ import Homepage from '../Homepage';
 import Footer from '../Footer';
 import Category from '../../containers/Category';
 import Product from '../../containers/Product';
+import Checkout from '../../containers/Checkout';
 
 const App = ({ categories, products }) => (
   <div className="app">
@@ -28,6 +29,9 @@ const App = ({ categories, products }) => (
         </Route>
       ))
     }
+    <Route path="/checkout" exact>
+      <Checkout />
+    </Route>
     <Footer />
   </div>
 );

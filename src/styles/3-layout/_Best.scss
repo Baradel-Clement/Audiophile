@@ -2,6 +2,7 @@
     width: 1110px;
     height: 588px;
     @extend %flex-between-center;
+    margin-bottom: 200px;
 }
 #CategoryBest, #ProductBest {
     margin-top: 160px;

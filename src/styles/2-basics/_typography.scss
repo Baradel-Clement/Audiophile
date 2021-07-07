@@ -125,11 +125,15 @@ h6 {
   letter-spacing: 1px;
 }
 
-p.Cart-product-desc-name {
+p.Cart-product-desc-name, p.Checkout-summary-product-desc-name {
   font-weight: 700;
 }
-p.Cart-product-desc-price {
+p.Cart-product-desc-price, p.Checkout-summary-product-desc-price {
   font-size: 14px;
+  opacity: 0.75;
+}
+
+.opacity {
   opacity: 0.75;
 }
 

@@ -1,7 +1,9 @@
 import { connect } from 'react-redux';
 
 import Cart from '../../components/Cart';
-import { cleanCart, addQuantityProductInCart, removeQuantityProductInCart } from '../../actions';
+import {
+  cleanCart, addQuantityProductInCart, removeQuantityProductInCart, setDisplayCart,
+} from '../../actions';
 
 const mapStateToProps = (state) => ({
   productsInCart: state.cart.products,
@@ -18,6 +20,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   removeQuantityProductInCart: (product) => {
     dispatch(removeQuantityProductInCart(product));
+  },
+  setDisplayCart: (displayCart) => {
+    dispatch(setDisplayCart(displayCart));
   },
 });
 
