@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 import logo from '../../assets/AudiophileAssets/shared/desktop/logo.svg';
@@ -8,8 +9,9 @@ import headphonesCategoryIcon from '../../assets/AudiophileAssets/category-headp
 import speakersCategoryIcon from '../../assets/AudiophileAssets/category-speakers/mobile/image-removebg-preview(38).png';
 import earphonesCategoryIcon from '../../assets/AudiophileAssets/category-earphones/mobile/image-removebg-preview(42).png';
 import rightArrow from '../../assets/AudiophileAssets/shared/desktop/icon-arrow-right.svg';
+import Cart from '../../containers/Cart';
 
-const NavBar = () => {
+const NavBar = ({ setDisplayCart, displayCart, totalProductInCart }) => {
   const [displayMenu, setDisplayMenu] = useState(false);
 
   return (
@@ -29,8 +31,14 @@ const NavBar = () => {
             <NavLink to="/earphones" exact><li className="NavBar-link Nav-link">EARPHONES</li></NavLink>
           </ul>
           <div className="NavBar-cart">
-            <img src={iconCart} alt="cart" />
+            {
+              totalProductInCart !== 0 && (
+                <span className="NavBar-cart-totalProduct">{totalProductInCart}</span>
+              )
+            }
+            <img onClick={() => setDisplayCart(!displayCart)} src={iconCart} alt="cart" />
           </div>
+          { displayCart && (<Cart />) }
         </div>
       </div>
       {
@@ -61,6 +69,12 @@ const NavBar = () => {
       }
     </>
   );
+};
+
+NavBar.propTypes = {
+  setDisplayCart: PropTypes.func.isRequired,
+  displayCart: PropTypes.bool.isRequired,
+  totalProductInCart: PropTypes.number.isRequired,
 };
 
 export default NavBar;

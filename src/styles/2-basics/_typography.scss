@@ -125,6 +125,21 @@ h6 {
   letter-spacing: 1px;
 }
 
+p.Cart-product-desc-name {
+  font-weight: 700;
+}
+p.Cart-product-desc-price {
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.Cart-product-quantity-count {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+
 @media screen and (max-width: 1160px) {
   .Categories-category-title {
     font-size: 15px;

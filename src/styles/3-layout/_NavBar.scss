@@ -42,6 +42,27 @@
   color: $orange;
 }
 
+.NavBar-cart {
+  position: relative;
+}
+
+.NavBar-cart-totalProduct {
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: $orange;
+  color: white;
+  font-size: 10px;
+  @extend %flex-center-center;
+}
+
+.NavBar-cart > img {
+  cursor: pointer;
+}
+
 .Menu {
   width: 100%;
   background-color: white;

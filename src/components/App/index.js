@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 
-import NavBar from '../NavBar';
+import NavBar from '../../containers/NavBar';
 import Homepage from '../Homepage';
 import Footer from '../Footer';
 import Category from '../../containers/Category';

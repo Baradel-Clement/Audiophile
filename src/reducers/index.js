@@ -4,6 +4,10 @@ import {
   PRESS_MINUS_ADDCART_COUNT,
   PRESS_PLUS_ADDCART_COUNT,
   ADD_CART,
+  CLEAN_CART,
+  ADD_QUANTITY_PRODUCT_IN_CART,
+  REMOVE_QUANTITY_PRODUCT_IN_CART,
+  SET_DISPLAY_CART,
 } from '../actions';
 
 const initialState = {
@@ -27,6 +31,7 @@ const initialState = {
     products: [],
     totalPrice: 0,
     totalProduct: 0,
+    display: false,
   },
 };
 
@@ -71,6 +76,56 @@ const reducer = (state = initialState, action = {}) => {
         },
       };
     }
+    case CLEAN_CART:
+      return {
+        ...state,
+        addCartQuantityCount: 1,
+        cart: {
+          ...state.cart,
+          totalPrice: 0,
+          totalProduct: 0,
+          products: [],
+        },
+      };
+    case ADD_QUANTITY_PRODUCT_IN_CART: {
+      const productsInCart = state.cart.products;
+      const indexProduct = productsInCart.findIndex((
+        (product) => product.id === action.product.id));
+      productsInCart[indexProduct].quantityInCart += 1;
+      return {
+        ...state,
+        cart: {
+          ...state.cart,
+          totalPrice: state.cart.totalPrice + action.product.price,
+          totalProduct: state.cart.totalProduct + 1,
+          products: productsInCart,
+        },
+      };
+    }
+    case REMOVE_QUANTITY_PRODUCT_IN_CART: {
+      const productsInCart = state.cart.products;
+      const indexProduct = productsInCart.findIndex((
+        (product) => product.id === action.product.id));
+      if (action.product.quantityInCart === 1) productsInCart.splice(indexProduct, 1);
+      else productsInCart[indexProduct].quantityInCart -= 1;
+      return {
+        ...state,
+        cart: {
+          ...state.cart,
+          totalPrice: state.cart.totalPrice - action.product.price,
+          totalProduct: state.cart.totalProduct - 1,
+          products: productsInCart,
+        },
+      };
+    }
+    case SET_DISPLAY_CART:
+      return {
+        ...state,
+        cart: {
+          ...state.cart,
+          display: action.displayCart,
+        },
+      };
     default:
       return { ...state };
   }
