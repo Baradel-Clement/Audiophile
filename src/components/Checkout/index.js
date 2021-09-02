@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 
+import CheckoutForm from '../../containers/Checkout/CheckoutForm';
+
 const Checkout = ({ productsInCheckout, totalPrice }) => {
   const history = useHistory();
 
@@ -9,7 +11,7 @@ const Checkout = ({ productsInCheckout, totalPrice }) => {
     <div className="Checkout">
       <div className="Checkout-wrap">
         <p onClick={() => history.goBack()}>Go Back</p>
-        <div className="Checkout-form" />
+        <CheckoutForm />
         <div className="Checkout-summary">
           <div className="Checkout-summary-wrap">
             <h6>SUMMARY</h6>
@@ -45,7 +47,7 @@ const Checkout = ({ productsInCheckout, totalPrice }) => {
                 <h6 className="colorOrange">$ {totalPrice + 50}</h6>
               </div>
             </div>
-            <button className="button button1 Checkout-summary-button" type="button">CONTINUE & PAY</button>
+            <button className="button button1 Checkout-summary-button" type="submit" form="CheckoutForm">CONTINUE & PAY</button>
           </div>
         </div>
       </div>

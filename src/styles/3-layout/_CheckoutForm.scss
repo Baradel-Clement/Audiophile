@@ -1,0 +1,131 @@
+.Checkout-form {
+  width: 730px;
+  height: 1126px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 54px 48px 48px;
+}
+
+.Checkout-form > h3 {
+  margin-bottom: 41px;
+}
+
+#CheckoutForm {
+  width: 100%;
+}
+
+.Checkout-form-billingDetails {
+  width: 100%;
+  @extend %flex-between-start;
+  flex-flow: column;
+  margin-bottom: 53px;
+}
+
+.Checkout-form-billingDetails > .sub-title, .Checkout-form-shippingInfo > .sub-title, .Checkout-form-paymentDetails > .sub-title {
+  margin-bottom: 50px;
+}
+
+.Checkout-form-inputs {
+  width: 100%;
+  @extend %flex-between-center;
+  flex-flow: row wrap;
+}
+
+.Checkout-form-input {
+  width: 309px;
+  height: 81px;
+  @extend %flex-between-start;
+  flex-flow: column;
+  margin-bottom: 24px;
+}
+
+.Checkout-form-input:last-child {
+  margin-bottom: 0px;
+}
+
+label {
+  cursor: text;
+}
+
+.Checkout-form-shippingInfo {
+  margin-bottom: 61px;
+}
+
+#Checkout-form-input-adresse, #Checkout-form-input-adresse > input {
+  width: 634px;
+}
+
+.Checkout-form-paymentDetails {
+  width: 100%;
+  height: 274px;
+  @extend %flex-start-start;
+  flex-flow: column;
+}
+
+.Checkout-form-paymentDetails-methods {
+  width: 100%;
+  height: 128px;
+  @extend %flex-between-center;
+  flex-flow: column;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.Checkout-form-paymentDetails-methods > p:first-child {
+  position: absolute;
+  left: 0px;
+}
+
+.Checkout-form-paymentDetails-method {
+  width: 309px;
+  height: 57px;
+  align-self: flex-end;
+  border: 1px solid #CFCFCF;
+  border-radius: 8px;
+  @extend %flex-start-center;
+  padding: 18px 16px;
+}
+
+.Checkout-form-paymentDetails-method:hover {
+  border: 1px solid $orange;
+  cursor: pointer;
+}
+
+.paymentMethodCircle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #CFCFCF;
+  border-radius: 50%;
+  margin-right: 16px;
+  position: relative;
+}
+
+.paymentMethodCircleInner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: $orange;
+  border-radius: 50%;
+}
+
+.Checkout-form-paymentDetails-eMoneyInputs {
+  width: 100%;
+  height: 81px;
+  @extend %flex-between-center;
+}
+
+.Checkout-form-paymentDetails-cash {
+  width: 100%;
+  @extend %flex-between-center;
+}
+
+.Checkout-form-paymentDetails-cash > p {
+  width: 554px;
+}
+
+.Checkout-form-paymentDetails-eMoneyInputs > .Checkout-form-input {
+  margin-bottom: 0px;
+}

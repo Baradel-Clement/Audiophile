@@ -144,6 +144,31 @@ p.Cart-product-desc-price, p.Checkout-summary-product-desc-price {
   letter-spacing: 1px;
 }
 
+label, .labelFont {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.2142857164144516px;
+}
+
+.Checkout-form-input > input {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: -0.25px;
+}
+
+.Checkout-form-input > input::placeholder {
+  opacity: 0.75;
+}
+
+.paymentMethodFont {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: -0.25px;
+}
+
 @media screen and (max-width: 1160px) {
   .Categories-category-title {
     font-size: 15px;

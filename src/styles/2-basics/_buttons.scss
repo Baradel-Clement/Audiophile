@@ -66,3 +66,16 @@
   @extend %transition;
   background-color: #4C4C4C;
 }
+
+.Checkout-form-input > input {
+  border: 1px solid #CFCFCF;
+  width: 309px;
+  height: 56px;
+  border-radius: 8px;
+  padding: 18px 24px;
+}
+
+.Checkout-form-input > input:focus {
+  border: 1px solid $orange;
+  caret-color: $orange;
+}

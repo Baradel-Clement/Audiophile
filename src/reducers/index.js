@@ -8,6 +8,8 @@ import {
   ADD_QUANTITY_PRODUCT_IN_CART,
   REMOVE_QUANTITY_PRODUCT_IN_CART,
   SET_DISPLAY_CART,
+  CHANGE_PAYMENT_METHOD,
+  HANDLE_CHANGE_INPUT,
 } from '../actions';
 
 const initialState = {
@@ -32,6 +34,9 @@ const initialState = {
     totalPrice: 0,
     totalProduct: 0,
     display: false,
+  },
+  checkout: {
+    paymentMethod: 'e-Money',
   },
 };
 
@@ -124,6 +129,22 @@ const reducer = (state = initialState, action = {}) => {
         cart: {
           ...state.cart,
           display: action.displayCart,
+        },
+      };
+    case CHANGE_PAYMENT_METHOD:
+      return {
+        ...state,
+        checkout: {
+          ...state.checkout,
+          paymentMethod: action.paymentMethod,
+        },
+      };
+    case HANDLE_CHANGE_INPUT:
+      return {
+        ...state,
+        checkout: {
+          ...state.checkout,
+          [action.fieldName]: action.fieldValue,
         },
       };
     default:
