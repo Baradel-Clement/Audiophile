@@ -7,6 +7,7 @@ import {
 } from '../../actions';
 
 const mapStateToProps = (state) => ({
+  phoneValue: state.checkout.phone,
   paymentMethod: state.checkout.paymentMethod,
 });
 

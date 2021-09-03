@@ -67,7 +67,7 @@
   background-color: #4C4C4C;
 }
 
-.Checkout-form-input > input {
+.Checkout-form-input > input, .phoneInput {
   border: 1px solid #CFCFCF;
   width: 309px;
   height: 56px;
@@ -75,7 +75,14 @@
   padding: 18px 24px;
 }
 
-.Checkout-form-input > input:focus {
+.Checkout-form-input > input:focus, .phoneInput:focus {
   border: 1px solid $orange;
   caret-color: $orange;
 }
+.phoneInput {
+  margin-left: 40px;
+  padding: 18px;
+  width: 269px;
+  border-radius: 0px 8px 8px 0px;
+}
+// react-tel-input

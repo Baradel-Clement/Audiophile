@@ -2,17 +2,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import cashIcon from '../../assets/AudiophileAssets/shared/desktop/icon-cash.svg';
 
 const CheckoutForm = ({
-  changePaymentMethod, paymentMethod, handleChangeInput,
+  changePaymentMethod, paymentMethod, handleChangeInput, phoneValue,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
   };
 
-  const handleChange = (evt) => {
-    handleChangeInput(evt.target.name, evt.target.value);
+  const handleChange = (e) => {
+    handleChangeInput(e.target.name, e.target.value);
   };
 
   return (
@@ -31,8 +33,18 @@ const CheckoutForm = ({
               <input type="email" name="Email" placeholder="example@mail.com" />
             </div>
             <div className="Checkout-form-input">
-              <label htmlFor="Phone">Phone Number</label>
-              <input type="tel" name="Phone" placeholder="+1 (202) 555-0136" />
+              <label htmlFor="phone">Phone number</label>
+              <PhoneInput
+                country="us"
+                value={phoneValue}
+                inputProps={{
+                  name: 'phone',
+                  required: true,
+                  placeholder: 'Phone number',
+                  className: 'phoneInput',
+                }}
+                onChange={(phone, country, e) => (e.type === 'change' ? handleChange(e) : null)}
+              />
             </div>
           </div>
         </div>
@@ -105,6 +117,11 @@ CheckoutForm.propTypes = {
   changePaymentMethod: PropTypes.func.isRequired,
   paymentMethod: PropTypes.string.isRequired,
   handleChangeInput: PropTypes.func.isRequired,
+  phoneValue: PropTypes.string,
+};
+
+CheckoutForm.defaultProps = {
+  phoneValue: '',
 };
 
 export default CheckoutForm;

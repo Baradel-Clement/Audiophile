@@ -36,6 +36,7 @@ const initialState = {
     display: false,
   },
   checkout: {
+    phone: '',
     paymentMethod: 'e-Money',
   },
 };

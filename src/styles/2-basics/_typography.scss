@@ -151,14 +151,14 @@ label, .labelFont {
   letter-spacing: -0.2142857164144516px;
 }
 
-.Checkout-form-input > input {
+.Checkout-form-input > input, .phoneInput {
   font-size: 14px;
   font-weight: 700;
   line-height: 19px;
   letter-spacing: -0.25px;
 }
 
-.Checkout-form-input > input::placeholder {
+.Checkout-form-input > input::placeholder, .phoneInput::placeholder {
   opacity: 0.75;
 }
 
