@@ -10,6 +10,8 @@ import {
   SET_DISPLAY_CART,
   CHANGE_PAYMENT_METHOD,
   HANDLE_CHANGE_INPUT,
+  DISPLAY_ERROR_EMAIL,
+  CLEAR_ERROR_INPUT,
 } from '../actions';
 
 const initialState = {
@@ -38,6 +40,7 @@ const initialState = {
   checkout: {
     phone: '',
     paymentMethod: 'e-Money',
+    errorEmail: false,
   },
 };
 
@@ -148,6 +151,27 @@ const reducer = (state = initialState, action = {}) => {
           [action.fieldName]: action.fieldValue,
         },
       };
+    case DISPLAY_ERROR_EMAIL:
+      return {
+        ...state,
+        checkout: {
+          ...state.checkout,
+          errorEmail: true,
+        },
+      };
+    case CLEAR_ERROR_INPUT: {
+      const { inputName } = action;
+      const error = 'error';
+      const concat = error.concat('', inputName);
+      console.log(concat);
+      return {
+        ...state,
+        checkout: {
+          ...state.checkout,
+          [concat]: false,
+        },
+      };
+    }
     default:
       return { ...state };
   }

@@ -5,9 +5,16 @@ import PropTypes from 'prop-types';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import cashIcon from '../../assets/AudiophileAssets/shared/desktop/icon-cash.svg';
+import validateEmail from '../../utils';
 
 const CheckoutForm = ({
-  changePaymentMethod, paymentMethod, handleChangeInput, phoneValue,
+  changePaymentMethod,
+  paymentMethod,
+  handleChangeInput,
+  phoneValue,
+  displayErrorEmail,
+  errorEmail,
+  clearErrorInput,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -30,7 +37,20 @@ const CheckoutForm = ({
             </div>
             <div className="Checkout-form-input">
               <label htmlFor="Email">Email Address</label>
-              <input type="email" name="Email" placeholder="example@mail.com" />
+              {
+                errorEmail && (
+                  <p className="error errorFont">Wrong format</p>
+                )
+              }
+              <input
+                onFocus={(e) => clearErrorInput(e.target.name)}
+                onBlur={(e) => (
+                  validateEmail(e.target.value) === true ? null : displayErrorEmail())}
+                type="email"
+                name="Email"
+                className={errorEmail ? 'errorInput' : ''}
+                placeholder="example@mail.com"
+              />
             </div>
             <div className="Checkout-form-input">
               <label htmlFor="phone">Phone number</label>
@@ -57,7 +77,7 @@ const CheckoutForm = ({
             </div>
             <div className="Checkout-form-input">
               <label htmlFor="ZIP">ZIP Code</label>
-              <input type="number" name="ZIP" placeholder="10001" />
+              <input pattern="[0-9]+" name="ZIP" placeholder="10001" />
             </div>
             <div className="Checkout-form-input">
               <label htmlFor="City">City</label>
@@ -117,7 +137,10 @@ CheckoutForm.propTypes = {
   changePaymentMethod: PropTypes.func.isRequired,
   paymentMethod: PropTypes.string.isRequired,
   handleChangeInput: PropTypes.func.isRequired,
+  displayErrorEmail: PropTypes.func.isRequired,
   phoneValue: PropTypes.string,
+  errorEmail: PropTypes.bool.isRequired,
+  clearErrorInput: PropTypes.func.isRequired,
 };
 
 CheckoutForm.defaultProps = {

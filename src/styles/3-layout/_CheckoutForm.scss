@@ -36,6 +36,7 @@
   height: 81px;
   @extend %flex-between-start;
   flex-flow: column;
+  position: relative;
   margin-bottom: 24px;
 }
 
@@ -128,4 +129,14 @@ label {
 
 .Checkout-form-paymentDetails-eMoneyInputs > .Checkout-form-input {
   margin-bottom: 0px;
+}
+
+.Checkout-form-input > p.error {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.Checkout-form-input > input.errorInput {
+  border: 2px solid #CD2C2C;
 }

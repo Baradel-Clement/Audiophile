@@ -169,6 +169,17 @@ label, .labelFont {
   letter-spacing: -0.25px;
 }
 
+.error {
+  color: #CD2C2C;
+}
+
+.errorFont {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.2142857164144516px;
+}
+
 @media screen and (max-width: 1160px) {
   .Categories-category-title {
     font-size: 15px;
