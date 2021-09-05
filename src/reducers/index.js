@@ -11,6 +11,7 @@ import {
   CHANGE_PAYMENT_METHOD,
   HANDLE_CHANGE_INPUT,
   DISPLAY_ERROR_EMAIL,
+  DISPLAY_ERROR_ZIP,
   CLEAR_ERROR_INPUT,
 } from '../actions';
 
@@ -41,6 +42,7 @@ const initialState = {
     phone: '',
     paymentMethod: 'e-Money',
     errorEmail: false,
+    errorZip: false,
   },
 };
 
@@ -159,11 +161,18 @@ const reducer = (state = initialState, action = {}) => {
           errorEmail: true,
         },
       };
+    case DISPLAY_ERROR_ZIP:
+      return {
+        ...state,
+        checkout: {
+          ...state.checkout,
+          errorZip: true,
+        },
+      };
     case CLEAR_ERROR_INPUT: {
       const { inputName } = action;
       const error = 'error';
       const concat = error.concat('', inputName);
-      console.log(concat);
       return {
         ...state,
         checkout: {

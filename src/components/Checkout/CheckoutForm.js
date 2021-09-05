@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import cashIcon from '../../assets/AudiophileAssets/shared/desktop/icon-cash.svg';
-import validateEmail from '../../utils';
+import { validateEmail, validateZip } from '../../utils';
 
 const CheckoutForm = ({
   changePaymentMethod,
@@ -14,7 +14,9 @@ const CheckoutForm = ({
   phoneValue,
   displayErrorEmail,
   errorEmail,
+  errorZip,
   clearErrorInput,
+  displayErrorZip,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -46,7 +48,6 @@ const CheckoutForm = ({
                 onFocus={(e) => clearErrorInput(e.target.name)}
                 onBlur={(e) => (
                   validateEmail(e.target.value) === true ? null : displayErrorEmail())}
-                type="email"
                 name="Email"
                 className={errorEmail ? 'errorInput' : ''}
                 placeholder="example@mail.com"
@@ -77,7 +78,18 @@ const CheckoutForm = ({
             </div>
             <div className="Checkout-form-input">
               <label htmlFor="ZIP">ZIP Code</label>
-              <input pattern="[0-9]+" name="ZIP" placeholder="10001" />
+              {
+                errorZip && (
+                  <p className="error errorFont">Wrong format</p>
+                )
+              }
+              <input
+                name="Zip"
+                placeholder="10001"
+                onFocus={(e) => clearErrorInput(e.target.name)}
+                onBlur={(e) => (validateZip(e.target.value) === true ? null : displayErrorZip())}
+                className={errorZip ? 'errorInput' : ''}
+              />
             </div>
             <div className="Checkout-form-input">
               <label htmlFor="City">City</label>
@@ -138,8 +150,10 @@ CheckoutForm.propTypes = {
   paymentMethod: PropTypes.string.isRequired,
   handleChangeInput: PropTypes.func.isRequired,
   displayErrorEmail: PropTypes.func.isRequired,
+  displayErrorZip: PropTypes.func.isRequired,
   phoneValue: PropTypes.string,
   errorEmail: PropTypes.bool.isRequired,
+  errorZip: PropTypes.bool.isRequired,
   clearErrorInput: PropTypes.func.isRequired,
 };
 

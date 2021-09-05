@@ -8,6 +8,7 @@ export const SET_DISPLAY_CART = 'SET_DISPLAY_CART';
 export const CHANGE_PAYMENT_METHOD = 'CHANGE_PAYMENT_METHOD';
 export const HANDLE_CHANGE_INPUT = 'HANDLE_CHANGE_INPUT';
 export const DISPLAY_ERROR_EMAIL = 'DISPLAY_ERROR_EMAIL';
+export const DISPLAY_ERROR_ZIP = 'DISPLAY_ERROR_ZIP';
 export const CLEAR_ERROR_INPUT = 'CLEAR_ERROR_INPUT';
 
 export const pressMinusAddCartCount = () => ({
@@ -55,6 +56,10 @@ export const handleChangeInput = (fieldName, fieldValue) => ({
 
 export const displayErrorEmail = () => ({
   type: DISPLAY_ERROR_EMAIL,
+});
+
+export const displayErrorZip = () => ({
+  type: DISPLAY_ERROR_ZIP,
 });
 
 export const clearErrorInput = (inputName) => ({

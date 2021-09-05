@@ -5,6 +5,7 @@ import {
   changePaymentMethod,
   handleChangeInput,
   displayErrorEmail,
+  displayErrorZip,
   clearErrorInput,
 } from '../../actions';
 
@@ -12,6 +13,7 @@ const mapStateToProps = (state) => ({
   phoneValue: state.checkout.phone,
   paymentMethod: state.checkout.paymentMethod,
   errorEmail: state.checkout.errorEmail,
+  errorZip: state.checkout.errorZip,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -23,6 +25,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   displayErrorEmail: () => {
     dispatch(displayErrorEmail());
+  },
+  displayErrorZip: () => {
+    dispatch(displayErrorZip());
   },
   clearErrorInput: (inputName) => {
     dispatch(clearErrorInput(inputName));
