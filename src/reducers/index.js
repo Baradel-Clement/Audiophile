@@ -13,6 +13,7 @@ import {
   DISPLAY_ERROR_EMAIL,
   DISPLAY_ERROR_ZIP,
   CLEAR_ERROR_INPUT,
+  IS_CHECKOUT_FORM_VALID,
 } from '../actions';
 
 const initialState = {
@@ -40,9 +41,18 @@ const initialState = {
   },
   checkout: {
     phone: '',
+    name: '',
+    Email: '',
+    adress: '',
+    Zip: '',
+    country: '',
+    city: '',
+    eMoneyNumber: '',
+    eMoneyPin: '',
     paymentMethod: 'e-Money',
     errorEmail: false,
     errorZip: false,
+    isCheckoutFormValid: false,
   },
 };
 
@@ -178,6 +188,36 @@ const reducer = (state = initialState, action = {}) => {
         checkout: {
           ...state.checkout,
           [concat]: false,
+        },
+      };
+    }
+    case IS_CHECKOUT_FORM_VALID: {
+      let fieldsEmpty = 0;
+      const {
+        phone, name, Email, adress, Zip, country, city,
+        eMoneyNumber, eMoneyPin, paymentMethod, errorEmail, errorZip,
+      } = state.checkout;
+      const inputs = [name, Email, phone, adress, Zip, country, city];
+
+      inputs.forEach((input) => {
+        if (input === '') {
+          fieldsEmpty += 1;
+        }
+      });
+      console.log(paymentMethod)
+      if (paymentMethod === 'e-Money' && (eMoneyNumber === '' || eMoneyPin === '')) {
+        fieldsEmpty += 1;
+      }
+
+      let isCheckoutFormValid = false;
+      if (fieldsEmpty === 0 && (errorEmail === false && errorZip === false)) {
+        isCheckoutFormValid = true;
+      }
+      return {
+        ...state,
+        checkout: {
+          ...state.checkout,
+          isCheckoutFormValid,
         },
       };
     }

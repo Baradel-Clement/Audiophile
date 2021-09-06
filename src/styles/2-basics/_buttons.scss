@@ -67,6 +67,15 @@
   background-color: #4C4C4C;
 }
 
+.button-disable {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button.button-disable:hover {
+  background-color: $orange;
+}
+
 .Checkout-form-input > input, .phoneInput {
   border: 1px solid #CFCFCF;
   width: 309px;

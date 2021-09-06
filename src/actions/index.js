@@ -10,6 +10,7 @@ export const HANDLE_CHANGE_INPUT = 'HANDLE_CHANGE_INPUT';
 export const DISPLAY_ERROR_EMAIL = 'DISPLAY_ERROR_EMAIL';
 export const DISPLAY_ERROR_ZIP = 'DISPLAY_ERROR_ZIP';
 export const CLEAR_ERROR_INPUT = 'CLEAR_ERROR_INPUT';
+export const IS_CHECKOUT_FORM_VALID = 'IS_CHECKOUT_FORM_VALID';
 
 export const pressMinusAddCartCount = () => ({
   type: PRESS_MINUS_ADDCART_COUNT,
@@ -65,4 +66,8 @@ export const displayErrorZip = () => ({
 export const clearErrorInput = (inputName) => ({
   type: CLEAR_ERROR_INPUT,
   inputName,
+});
+
+export const isCheckoutFormValid = () => ({
+  type: IS_CHECKOUT_FORM_VALID,
 });

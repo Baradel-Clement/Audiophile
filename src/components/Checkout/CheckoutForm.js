@@ -17,6 +17,15 @@ const CheckoutForm = ({
   errorZip,
   clearErrorInput,
   displayErrorZip,
+  nameValue,
+  emailValue,
+  adressValue,
+  zipValue,
+  countryValue,
+  cityValue,
+  eMoneyNumberValue,
+  eMoneyPinValue,
+  isCheckoutFormValid,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -34,8 +43,8 @@ const CheckoutForm = ({
           <p className="sub-title">BILLING DETAILS</p>
           <div className="Checkout-form-inputs">
             <div className="Checkout-form-input">
-              <label htmlFor="Name">Name</label>
-              <input name="Name" placeholder="Name" />
+              <label htmlFor="name">Name</label>
+              <input onBlur={() => isCheckoutFormValid()} value={nameValue} onChange={(e) => handleChange(e)} name="name" placeholder="Name" />
             </div>
             <div className="Checkout-form-input">
               <label htmlFor="Email">Email Address</label>
@@ -46,11 +55,17 @@ const CheckoutForm = ({
               }
               <input
                 onFocus={(e) => clearErrorInput(e.target.name)}
-                onBlur={(e) => (
-                  validateEmail(e.target.value) === true ? null : displayErrorEmail())}
+                onBlur={(e) => {
+                  if (validateEmail(e.target.value) === false) {
+                    displayErrorEmail();
+                  }
+                  isCheckoutFormValid();
+                }}
                 name="Email"
                 className={errorEmail ? 'errorInput' : ''}
                 placeholder="example@mail.com"
+                value={emailValue}
+                onChange={(e) => handleChange(e)}
               />
             </div>
             <div className="Checkout-form-input">
@@ -65,6 +80,7 @@ const CheckoutForm = ({
                   className: 'phoneInput',
                 }}
                 onChange={(phone, country, e) => (e.type === 'change' ? handleChange(e) : null)}
+                onBlur={() => isCheckoutFormValid()}
               />
             </div>
           </div>
@@ -73,8 +89,14 @@ const CheckoutForm = ({
           <p className="sub-title">SHIPPING INFO</p>
           <div className="Checkout-form-inputs">
             <div id="Checkout-form-input-adresse" className="Checkout-form-input">
-              <label htmlFor="Adresse">Adress</label>
-              <input name="Adresse" placeholder="1137 Williams Avenue" />
+              <label htmlFor="adress">Adress</label>
+              <input
+                onBlur={() => isCheckoutFormValid()}
+                value={adressValue}
+                onChange={(e) => handleChange(e)}
+                name="adress"
+                placeholder="1137 Williams Avenue"
+              />
             </div>
             <div className="Checkout-form-input">
               <label htmlFor="ZIP">ZIP Code</label>
@@ -86,18 +108,37 @@ const CheckoutForm = ({
               <input
                 name="Zip"
                 placeholder="10001"
+                value={zipValue}
+                onChange={(e) => handleChange(e)}
                 onFocus={(e) => clearErrorInput(e.target.name)}
-                onBlur={(e) => (validateZip(e.target.value) === true ? null : displayErrorZip())}
+                onBlur={(e) => {
+                  if (validateZip(e.target.value) === false) {
+                    displayErrorZip();
+                  }
+                  isCheckoutFormValid();
+                }}
                 className={errorZip ? 'errorInput' : ''}
               />
             </div>
             <div className="Checkout-form-input">
-              <label htmlFor="City">City</label>
-              <input name="City" placeholder="New York" />
+              <label htmlFor="city">City</label>
+              <input
+                onBlur={() => isCheckoutFormValid()}
+                value={cityValue}
+                onChange={(e) => handleChange(e)}
+                name="city"
+                placeholder="New York"
+              />
             </div>
             <div className="Checkout-form-input">
-              <label htmlFor="Country">Country</label>
-              <input name="Country" placeholder="United States" />
+              <label htmlFor="country">Country</label>
+              <input
+                onBlur={() => isCheckoutFormValid()}
+                value={countryValue}
+                onChange={(e) => handleChange(e)}
+                name="country"
+                placeholder="United States"
+              />
             </div>
           </div>
         </div>
@@ -105,11 +146,23 @@ const CheckoutForm = ({
           <p className="sub-title">PAYMENT DETAILS</p>
           <div className="Checkout-form-paymentDetails-methods">
             <p className="labelFont">Payment Method</p>
-            <div onClick={() => changePaymentMethod('e-Money')} className="Checkout-form-paymentDetails-method">
+            <div
+              onClick={() => {
+                changePaymentMethod('e-Money');
+                isCheckoutFormValid();
+              }}
+              className="Checkout-form-paymentDetails-method"
+            >
               <span className="paymentMethodCircle">{paymentMethod === 'e-Money' && (<span className="paymentMethodCircleInner" />)}</span>
               <p className="paymentMethodFont">e-Money</p>
             </div>
-            <div onClick={() => changePaymentMethod('Cash')} className="Checkout-form-paymentDetails-method">
+            <div
+              onClick={() => {
+                changePaymentMethod('Cash');
+                isCheckoutFormValid();
+              }}
+              className="Checkout-form-paymentDetails-method"
+            >
               <span className="paymentMethodCircle">{paymentMethod === 'Cash' && (<span className="paymentMethodCircleInner" />)}</span>
               <p className="paymentMethodFont">Cash on Delivery</p>
             </div>
@@ -119,11 +172,23 @@ const CheckoutForm = ({
             <div className="Checkout-form-paymentDetails-eMoneyInputs">
               <div className="Checkout-form-input">
                 <label htmlFor="eMoneyNumber">e-Money Number</label>
-                <input type="number" name="eMoneyNumber" />
+                <input
+                  onBlur={() => isCheckoutFormValid()}
+                  value={eMoneyNumberValue}
+                  onChange={(e) => handleChange(e)}
+                  type="number"
+                  name="eMoneyNumber"
+                />
               </div>
               <div className="Checkout-form-input">
                 <label htmlFor="eMoneyPin">e-Money Pin</label>
-                <input type="number" name="eMoneyPin" />
+                <input
+                  onBlur={() => isCheckoutFormValid()}
+                  value={eMoneyPinValue}
+                  onChange={(e) => handleChange(e)}
+                  type="number"
+                  name="eMoneyPin"
+                />
               </div>
             </div>
           )
@@ -155,6 +220,15 @@ CheckoutForm.propTypes = {
   errorEmail: PropTypes.bool.isRequired,
   errorZip: PropTypes.bool.isRequired,
   clearErrorInput: PropTypes.func.isRequired,
+  nameValue: PropTypes.string.isRequired,
+  emailValue: PropTypes.string.isRequired,
+  adressValue: PropTypes.string.isRequired,
+  zipValue: PropTypes.string.isRequired,
+  countryValue: PropTypes.string.isRequired,
+  cityValue: PropTypes.string.isRequired,
+  eMoneyNumberValue: PropTypes.string.isRequired,
+  eMoneyPinValue: PropTypes.string.isRequired,
+  isCheckoutFormValid: PropTypes.func.isRequired,
 };
 
 CheckoutForm.defaultProps = {

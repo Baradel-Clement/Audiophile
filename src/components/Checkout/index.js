@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import CheckoutForm from '../../containers/Checkout/CheckoutForm';
 
-const Checkout = ({ productsInCheckout, totalPrice }) => {
+const Checkout = ({ productsInCheckout, totalPrice, isCheckoutFormValid }) => {
   const history = useHistory();
 
   return (
@@ -47,7 +47,12 @@ const Checkout = ({ productsInCheckout, totalPrice }) => {
                 <h6 className="colorOrange">$ {totalPrice + 50}</h6>
               </div>
             </div>
-            <button className="button button1 Checkout-summary-button" type="submit" form="CheckoutForm">CONTINUE & PAY</button>
+            <button
+              className={`button button1 Checkout-summary-button ${isCheckoutFormValid === false ? 'button-disable' : ''}`}
+              type="submit"
+              form="CheckoutForm"
+            >CONTINUE & PAY
+            </button>
           </div>
         </div>
       </div>
@@ -65,6 +70,7 @@ Checkout.propTypes = {
     }).isRequired,
   ).isRequired,
   totalPrice: PropTypes.number.isRequired,
+  isCheckoutFormValid: PropTypes.bool.isRequired,
 };
 
 export default Checkout;
