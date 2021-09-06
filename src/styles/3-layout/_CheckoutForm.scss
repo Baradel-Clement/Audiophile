@@ -44,10 +44,6 @@
   margin-bottom: 0px;
 }
 
-label {
-  cursor: text;
-}
-
 .Checkout-form-shippingInfo {
   margin-bottom: 61px;
 }
@@ -139,4 +135,82 @@ label {
 
 .Checkout-form-input > input.errorInput {
   border: 2px solid #CD2C2C;
+}
+
+@media screen and (max-width: 1160px) {
+  .Checkout-form {
+    width: 100%;
+    height: 1084px;
+    padding: 30px 27px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Checkout-form {
+    height: 1378px;
+    padding: 24px;
+  }
+  
+  .Checkout-form > h3, .Checkout-form-billingDetails, .Checkout-form-shippingInfo {
+    margin-bottom: 32px;
+  }
+  
+  .Checkout-form-inputs {
+    flex-flow: column nowrap;
+  }
+  
+  .Checkout-form-input {
+    width: 280px;
+    height: 81px;
+  }
+  
+  #Checkout-form-input-adresse, #Checkout-form-input-adresse > input {
+    width: 280px;
+  }
+  
+  .Checkout-form-paymentDetails {
+    height: 420px;
+  }
+  
+  .Checkout-form-paymentDetails-methods {
+    margin-bottom: 32px;
+    height: 161px;
+    justify-content: flex-end;
+  }
+
+  .Checkout-form-paymentDetails-methods > p:first-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  
+  .Checkout-form-paymentDetails-method {
+    width: 280px;
+    align-self: flex-start;
+  }
+
+  .Checkout-form-paymentDetails-method:nth-child(2) {
+    margin-bottom: 16px;
+  }
+  
+  .Checkout-form-paymentDetails-eMoneyInputs {
+    height: 186px;
+    align-items: flex-start;
+    flex-flow: column;
+  }
+  
+  .Checkout-form-paymentDetails-cash {
+    flex-flow: column;
+    align-items: flex-start;
+    height: 186px;
+  }
+  
+  .Checkout-form-paymentDetails-cash > p {
+    width: 100%;
+  }
+  
+  .Checkout-form-paymentDetails-eMoneyInputs > .Checkout-form-input:first-child {
+    margin-bottom: 24px;
+  }
 }

@@ -37,7 +37,7 @@ const CheckoutForm = ({
 
   return (
     <div className="Checkout-form">
-      <h3>CHECKOUT</h3>
+      <h3 className="h3Checkout">CHECKOUT</h3>
       <form onSubmit={handleSubmit} id="CheckoutForm" name="CheckoutForm">
         <div className="Checkout-form-billingDetails">
           <p className="sub-title">BILLING DETAILS</p>
@@ -66,6 +66,7 @@ const CheckoutForm = ({
                 placeholder="example@mail.com"
                 value={emailValue}
                 onChange={(e) => handleChange(e)}
+                inputMode="email"
               />
             </div>
             <div className="Checkout-form-input">
@@ -81,6 +82,7 @@ const CheckoutForm = ({
                 }}
                 onChange={(phone, country, e) => (e.type === 'change' ? handleChange(e) : null)}
                 onBlur={() => isCheckoutFormValid()}
+                inputMode="tel"
               />
             </div>
           </div>
@@ -118,6 +120,7 @@ const CheckoutForm = ({
                   isCheckoutFormValid();
                 }}
                 className={errorZip ? 'errorInput' : ''}
+                inputMode="numeric"
               />
             </div>
             <div className="Checkout-form-input">
@@ -178,6 +181,7 @@ const CheckoutForm = ({
                   onChange={(e) => handleChange(e)}
                   type="number"
                   name="eMoneyNumber"
+                  inputMode="numeric"
                 />
               </div>
               <div className="Checkout-form-input">
@@ -188,6 +192,7 @@ const CheckoutForm = ({
                   onChange={(e) => handleChange(e)}
                   type="number"
                   name="eMoneyPin"
+                  inputMode="numeric"
                 />
               </div>
             </div>

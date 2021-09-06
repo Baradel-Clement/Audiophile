@@ -113,17 +113,12 @@
     width: 689px;
     height: unset;
     align-items: center;
+    justify-content: flex-start;
     flex-flow: column;
   }
 
   .Checkout-wrap > p:first-child {
     top: -60px;
-  }
-  
-  .Checkout-form {
-    width: 100%;
-    height: 1084px;
-    margin-bottom: 32px;
   }
   
   .Checkout-summary {
@@ -146,10 +141,6 @@
 
   .Checkout-wrap > p:first-child {
     top: -44px;
-  }
-  
-  .Checkout-form {
-    height: 1378px;
   }
   
   .Checkout-summary-wrap {

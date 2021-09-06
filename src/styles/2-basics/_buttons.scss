@@ -76,6 +76,8 @@
   background-color: $orange;
 }
 
+// react-tel-input
+
 .Checkout-form-input > input, .phoneInput {
   border: 1px solid #CFCFCF;
   width: 309px;
@@ -94,4 +96,16 @@
   width: 269px;
   border-radius: 0px 8px 8px 0px;
 }
-// react-tel-input
+
+@media screen and (max-width: 768px) {
+  .Checkout-form-input > input, .phoneInput {
+    width: 280px;
+  }
+  
+  .phoneInput {
+    margin-left: 40px;
+    padding: 18px;
+    width: 240px;
+    border-radius: 0px 8px 8px 0px;
+  }
+}

@@ -204,7 +204,6 @@ const reducer = (state = initialState, action = {}) => {
           fieldsEmpty += 1;
         }
       });
-      console.log(paymentMethod)
       if (paymentMethod === 'e-Money' && (eMoneyNumber === '' || eMoneyPin === '')) {
         fieldsEmpty += 1;
       }
