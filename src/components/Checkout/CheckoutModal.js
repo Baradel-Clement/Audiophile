@@ -12,7 +12,7 @@ const CheckoutModal = ({
     <h3 className="h3CheckoutModal">THANK YOU<br /> FOR YOUR ORDER</h3>
     <p className="opacity">You will receive an email confirmation shortly.</p>
     <div className="CheckoutModal-recap">
-      <div style={{height: productsPurchased.length < 2 ? 139 : null }} className="CheckoutModal-recap-items-wrap">
+      <div style={{ height: productsPurchased.length < 2 ? 139 : null }} className="CheckoutModal-recap-items-wrap">
         <div className="CheckoutModal-recap-items">
           {
             !viewMore && (
