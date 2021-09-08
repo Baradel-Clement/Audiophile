@@ -3,14 +3,22 @@ import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 
 import CheckoutForm from '../../containers/Checkout/CheckoutForm';
+import CheckoutModal from '../../containers/Checkout/CheckoutModal';
 
-const Checkout = ({ productsInCheckout, totalPrice, isCheckoutFormValid }) => {
+const Checkout = ({
+  productsInCheckout, totalPrice, isCheckoutFormValid, displayCheckoutModal, checkoutModal,
+}) => {
   const history = useHistory();
 
   return (
     <div className="Checkout">
       <div className="Checkout-wrap">
         <p onClick={() => history.goBack()}>Go Back</p>
+        {
+          checkoutModal && (
+            <CheckoutModal />
+          )
+        }
         <CheckoutForm />
         <div className="Checkout-summary">
           <div className="Checkout-summary-wrap">
@@ -51,6 +59,7 @@ const Checkout = ({ productsInCheckout, totalPrice, isCheckoutFormValid }) => {
               className={`button button1 Checkout-summary-button ${isCheckoutFormValid === false ? 'button-disable' : ''}`}
               type="submit"
               form="CheckoutForm"
+              onClick={() => displayCheckoutModal()}
             >CONTINUE & PAY
             </button>
           </div>
@@ -71,6 +80,8 @@ Checkout.propTypes = {
   ).isRequired,
   totalPrice: PropTypes.number.isRequired,
   isCheckoutFormValid: PropTypes.bool.isRequired,
+  displayCheckoutModal: PropTypes.func.isRequired,
+  checkoutModal: PropTypes.bool.isRequired,
 };
 
 export default Checkout;

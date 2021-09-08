@@ -2,10 +2,21 @@ import { connect } from 'react-redux';
 
 import Checkout from '../../components/Checkout';
 
+import {
+  displayCheckoutModal,
+} from '../../actions';
+
 const mapStateToProps = (state) => ({
   productsInCheckout: state.cart.products,
   totalPrice: state.cart.totalPrice,
   isCheckoutFormValid: state.checkout.isCheckoutFormValid,
+  checkoutModal: state.checkout.checkoutModal,
 });
 
-export default connect(mapStateToProps)(Checkout);
+const mapDispatchToProps = (dispatch) => ({
+  displayCheckoutModal: () => {
+    dispatch(displayCheckoutModal());
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Checkout);

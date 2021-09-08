@@ -125,16 +125,19 @@ h6 {
   letter-spacing: 1px;
 }
 
-p.Cart-product-desc-name, p.Checkout-summary-product-desc-name {
+p.Cart-product-desc-name, p.Checkout-summary-product-desc-name, p.CheckoutModal-recap-item-desc-name, p.CheckoutModal-recap-item-desc-price {
   font-weight: 700;
 }
-p.Cart-product-desc-price, p.Checkout-summary-product-desc-price {
+p.Cart-product-desc-price, p.Checkout-summary-product-desc-price, p.CheckoutModal-recap-item-desc-price {
   font-size: 14px;
   opacity: 0.75;
 }
 
 .opacity {
   opacity: 0.75;
+}
+.white {
+  color: white;
 }
 
 .Cart-product-quantity-count {
@@ -144,7 +147,7 @@ p.Cart-product-desc-price, p.Checkout-summary-product-desc-price {
   letter-spacing: 1px;
 }
 
-label, .labelFont {
+label, .labelFont, .checkoutModalViewMore {
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
@@ -178,6 +181,10 @@ label, .labelFont {
   font-weight: 700;
   line-height: 16px;
   letter-spacing: -0.2142857164144516px;
+}
+
+.weight200 {
+  font-weight: 200;
 }
 
 @media screen and (max-width: 1160px) {
@@ -214,5 +221,9 @@ label, .labelFont {
     font-size: 28px;
     line-height: 38px;
     letter-spacing: 1px;
+  }
+  h3.h3CheckoutModal {
+    line-height: 28px;
+    letter-spacing: 0.86px;
   }
 }

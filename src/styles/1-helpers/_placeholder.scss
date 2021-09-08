@@ -40,6 +40,18 @@
       justify-content: flex-start;
       align-items: flex-start;
     }
+
+    %flex-end-end {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    %flex-start-end {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
   
     %back-image {
       background-size: cover;

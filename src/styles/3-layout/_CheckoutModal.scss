@@ -1,0 +1,146 @@
+.CheckoutModal {
+  position: absolute;
+  z-index: 2;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: grey;
+  width: 540px;
+  padding: 48px;
+  @extend %flex-start-start;
+  flex-flow: column;
+  border-radius: 8px;
+}
+
+.CheckoutModal > h3 {
+  margin-top: 33px;
+  margin-bottom: 24px;
+}
+ 
+.CheckoutModal-recap {
+  margin-bottom: 48px;
+  margin-top: 33px;
+  border-radius: 8px;
+  width: 444px;
+  @extend %flex-between-center;
+}
+
+.CheckoutModal-recap-items-wrap {
+  width: 246px;
+  height: 100%;
+  background-color: #F1F1F1;
+  border-radius: 8px 0px 0px 8px;
+  padding: 24px;
+  @extend %flex-center-center;
+  flex-flow: column;
+}
+
+.CheckoutModal-recap-items {
+  @extend %flex-start-center;
+  flex-flow: column;
+  margin-bottom: 12px;
+}
+
+.CheckoutModal-recap-item {
+  width: 198px;
+  height: 50px;
+  @extend %flex-between-center;
+}
+
+.CheckoutModal-recap-item:not(:first-child) {
+  margin-top: 16px;
+}
+
+.CheckoutModal-recap-item-desc {
+  @extend %flex-between-center;
+  flex-flow: column;
+}
+
+.CheckoutModal-recap-item > p:last-child {
+  align-self: flex-start;
+}
+
+.CheckoutModal-recap-items-viewMore {
+  height: 29px;
+  width: 100%;
+  @extend %flex-between-center;
+  flex-flow: column;
+}
+
+.CheckoutModal-recap-items-viewMore-rectangle {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  opacity: 0.25;
+}
+
+.CheckoutModal-recap-items-viewMore > p {
+  cursor: pointer;
+}
+
+.CheckoutModal-recap-items-viewMore > p:hover {
+  text-decoration: underline;
+}
+
+.CheckoutModal-recap-price {
+  background-color: black;
+  border-radius: 0px 8px 8px 0px;
+  width: 198px;
+  padding: 0px 0px 42px 32px;
+  @extend %flex-start-end;
+}
+
+.CheckoutModal-recap-price-wrap {
+  width: 101px;
+  height: 57px;
+  @extend %flex-between-start;
+  flex-flow: column;
+}
+
+.CheckoutModal > button {
+  align-self: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .CheckoutModal {
+    top: 70px;
+    width: 327px;
+    padding: 32px;
+  }
+  
+  .CheckoutModal > h3 {
+    margin-top: 23px;
+    margin-bottom: 16px;
+  }
+   
+  .CheckoutModal-recap {
+    margin-bottom: 23px;
+    margin-top: 24px;
+    width: 263px;
+    @extend %flex-between-center;
+    flex-flow: column;
+  }
+  
+  .CheckoutModal-recap-items-wrap {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+  }
+  
+  .CheckoutModal-recap-item {
+    width: 215px;
+  }
+  
+  .CheckoutModal-recap-price {
+    background-color: black;
+    border-radius: 0px 0px 8px 8px;
+    width: 100%;
+    height: 92px !important;
+    padding: 0px 0px 19px 24px;
+    @extend %flex-start-end;
+  }
+  
+  .CheckoutModal-recap-price-wrap {
+    width: 134px;
+  }
+}

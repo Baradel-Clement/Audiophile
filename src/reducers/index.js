@@ -14,6 +14,8 @@ import {
   DISPLAY_ERROR_ZIP,
   CLEAR_ERROR_INPUT,
   IS_CHECKOUT_FORM_VALID,
+  DISPLAY_CHECKOUT_MODAL,
+  DISPLAY_MODAL_VIEW_MORE,
 } from '../actions';
 
 const initialState = {
@@ -53,6 +55,8 @@ const initialState = {
     errorEmail: false,
     errorZip: false,
     isCheckoutFormValid: false,
+    checkoutModal: false,
+    modalViewMore: false,
   },
 };
 
@@ -220,6 +224,22 @@ const reducer = (state = initialState, action = {}) => {
         },
       };
     }
+    case DISPLAY_CHECKOUT_MODAL:
+      return {
+        ...state,
+        checkout: {
+          ...state.checkout,
+          checkoutModal: !state.checkout.checkoutModal,
+        },
+      };
+    case DISPLAY_MODAL_VIEW_MORE:
+      return {
+        ...state,
+        checkout: {
+          ...state.checkout,
+          modalViewMore: !state.checkout.modalViewMore,
+        },
+      };
     default:
       return { ...state };
   }
