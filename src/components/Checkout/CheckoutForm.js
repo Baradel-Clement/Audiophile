@@ -34,9 +34,6 @@ const CheckoutForm = ({
   const handleChange = (e) => {
     handleChangeInput(e.target.name, e.target.value);
   };
-  if (window.matchMedia('screen and (max-width: 768px)').matches) {
-    console.log('true')
-  }
 
   return (
     <div className="Checkout-form">
