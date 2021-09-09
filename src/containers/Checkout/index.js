@@ -4,6 +4,7 @@ import Checkout from '../../components/Checkout';
 
 import {
   displayCheckoutModal,
+  setDisplayMask,
 } from '../../actions';
 
 const mapStateToProps = (state) => ({
@@ -16,6 +17,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   displayCheckoutModal: () => {
     dispatch(displayCheckoutModal());
+  },
+  setDisplayMask: (displayMask, triggeredFrom) => {
+    dispatch(setDisplayMask(displayMask, triggeredFrom));
   },
 });
 

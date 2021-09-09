@@ -16,6 +16,8 @@ import {
   IS_CHECKOUT_FORM_VALID,
   DISPLAY_CHECKOUT_MODAL,
   DISPLAY_MODAL_VIEW_MORE,
+  SET_DISPLAY_MASK,
+  SET_DISPLAY_MENU,
 } from '../actions';
 
 const initialState = {
@@ -35,6 +37,8 @@ const initialState = {
   ],
   products,
   addCartQuantityCount: 1,
+  displayMenu: false,
+  displayMask: false,
   cart: {
     products: [],
     totalPrice: 0,
@@ -239,6 +243,24 @@ const reducer = (state = initialState, action = {}) => {
           ...state.checkout,
           modalViewMore: !state.checkout.modalViewMore,
         },
+      };
+    case SET_DISPLAY_MASK: {
+      let newDisplayMask = action.displayMask;
+      if (action.triggeredFrom === 'triggeredFromMenu' && state.cart.display === false) {
+        newDisplayMask = true;
+      }
+      if (action.triggeredFrom === 'triggeredFromCart' && state.displayMenu === false) {
+        newDisplayMask = true;
+      }
+      return {
+        ...state,
+        displayMask: newDisplayMask,
+      };
+    }
+    case SET_DISPLAY_MENU:
+      return {
+        ...state,
+        displayMenu: action.displayMenu,
       };
     default:
       return { ...state };

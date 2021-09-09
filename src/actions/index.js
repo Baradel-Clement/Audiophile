@@ -13,6 +13,8 @@ export const CLEAR_ERROR_INPUT = 'CLEAR_ERROR_INPUT';
 export const IS_CHECKOUT_FORM_VALID = 'IS_CHECKOUT_FORM_VALID';
 export const DISPLAY_CHECKOUT_MODAL = 'DISPLAY_CHECKOUT_MODAL';
 export const DISPLAY_MODAL_VIEW_MORE = 'DISPLAY_MODAL_VIEW_MORE';
+export const SET_DISPLAY_MASK = 'SET_DISPLAY_MASK';
+export const SET_DISPLAY_MENU = 'SET_DISPLAY_MENU';
 
 export const pressMinusAddCartCount = () => ({
   type: PRESS_MINUS_ADDCART_COUNT,
@@ -80,4 +82,15 @@ export const displayCheckoutModal = () => ({
 
 export const displayModalViewMore = () => ({
   type: DISPLAY_MODAL_VIEW_MORE,
+});
+
+export const setDisplayMask = (displayMask, triggeredFrom) => ({
+  type: SET_DISPLAY_MASK,
+  displayMask,
+  triggeredFrom,
+});
+
+export const setDisplayMenu = (displayMenu) => ({
+  type: SET_DISPLAY_MENU,
+  displayMenu,
 });

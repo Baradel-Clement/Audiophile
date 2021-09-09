@@ -8,10 +8,16 @@ import Footer from '../Footer';
 import Category from '../../containers/Category';
 import Product from '../../containers/Product';
 import Checkout from '../../containers/Checkout';
+import Mask from '../../containers/Mask';
 
-const App = ({ categories, products }) => (
+const App = ({ categories, products, displayMask }) => (
   <div className="app">
     <NavBar />
+    {
+      displayMask && (
+        <Mask />
+      )
+    }
     <Route path="/" exact>
       <Homepage />
     </Route>
@@ -48,6 +54,7 @@ App.propTypes = {
       slug: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
+  displayMask: PropTypes.bool.isRequired,
 };
 
 export default App;

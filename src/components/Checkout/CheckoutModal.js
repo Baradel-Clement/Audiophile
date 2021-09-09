@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import iconCheckoutModal from '../../assets/AudiophileAssets/shared/desktop/icon-checkout-modal.svg';
 
 const CheckoutModal = ({
-  totalPrice, productsPurchased, totalProduct, viewMore, displayViewMore,
+  totalPrice, productsPurchased, totalProduct, viewMore, displayViewMore, setDisplayMask,
 }) => (
   <div className="CheckoutModal">
     <img src={iconCheckoutModal} alt="iconCheckoutModal" />
@@ -64,7 +64,7 @@ const CheckoutModal = ({
         </div>
       </div>
     </div>
-    <button type="button" className="button button1"><NavLink to="/" exact>BACK TO HOME</NavLink></button>
+    <button type="button" className="button button1"><NavLink onClick={() => setDisplayMask(false, '')} to="/" exact>BACK TO HOME</NavLink></button>
   </div>
 );
 
@@ -81,6 +81,7 @@ CheckoutModal.propTypes = {
   totalProduct: PropTypes.number.isRequired,
   viewMore: PropTypes.bool.isRequired,
   displayViewMore: PropTypes.func.isRequired,
+  setDisplayMask: PropTypes.func.isRequired,
 };
 
 export default CheckoutModal;

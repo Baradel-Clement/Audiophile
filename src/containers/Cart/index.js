@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import Cart from '../../components/Cart';
 import {
-  cleanCart, addQuantityProductInCart, removeQuantityProductInCart, setDisplayCart,
+  cleanCart, addQuantityProductInCart, removeQuantityProductInCart, setDisplayCart, setDisplayMask,
 } from '../../actions';
 
 const mapStateToProps = (state) => ({
@@ -23,6 +23,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   setDisplayCart: (displayCart) => {
     dispatch(setDisplayCart(displayCart));
+  },
+  setDisplayMask: (displayMask) => {
+    dispatch(setDisplayMask(displayMask));
   },
 });
 

@@ -6,7 +6,12 @@ import CheckoutForm from '../../containers/Checkout/CheckoutForm';
 import CheckoutModal from '../../containers/Checkout/CheckoutModal';
 
 const Checkout = ({
-  productsInCheckout, totalPrice, isCheckoutFormValid, displayCheckoutModal, checkoutModal,
+  productsInCheckout,
+  totalPrice,
+  isCheckoutFormValid,
+  displayCheckoutModal,
+  checkoutModal,
+  setDisplayMask,
 }) => {
   const history = useHistory();
 
@@ -59,7 +64,10 @@ const Checkout = ({
               className={`button button1 Checkout-summary-button ${isCheckoutFormValid === false ? 'button-disable' : ''}`}
               type="submit"
               form="CheckoutForm"
-              onClick={() => displayCheckoutModal()}
+              onClick={() => {
+                displayCheckoutModal();
+                setDisplayMask(true, '');
+              }}
             >CONTINUE & PAY
             </button>
           </div>
@@ -82,6 +90,7 @@ Checkout.propTypes = {
   isCheckoutFormValid: PropTypes.bool.isRequired,
   displayCheckoutModal: PropTypes.func.isRequired,
   checkoutModal: PropTypes.bool.isRequired,
+  setDisplayMask: PropTypes.func.isRequired,
 };
 
 export default Checkout;
