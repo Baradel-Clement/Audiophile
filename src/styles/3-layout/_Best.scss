@@ -18,10 +18,6 @@
     flex-flow: column;
 }
 
-.Best-desc > p {
-    opacity: 0.5;
-}
-
 .Best-illu {
     background-image: url(/src/assets/AudiophileAssets/shared/desktop/image-best-gear.jpg);
     @extend %back-image;

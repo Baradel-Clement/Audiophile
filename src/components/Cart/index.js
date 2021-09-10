@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-closing-tag-location */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
@@ -57,15 +58,16 @@ const Cart = ({
           <p>TOTAL</p>
           <h6>$ {totalPrice}</h6>
         </div>
-        <button
+        <NavLink to="/checkout" exact><button
           onClick={() => {
             setDisplayCart(false);
             setDisplayMask(false);
           }}
           className="button button1 Cart-checkout-button"
           type="button"
-        ><NavLink to="/checkout" exact>CHECKOUT</NavLink>
+        >CHECKOUT
         </button>
+        </NavLink>
       </div>
     </div>
   </div>

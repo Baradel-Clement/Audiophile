@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Categories from '../Categories';
 import Best from '../Best';
@@ -13,7 +14,7 @@ const Homepage = () => (
           <p>Experience natural, lifelike audio and exceptional
             build quality made for the passionate music enthusiast.
           </p>
-          <button type="button" className="button button1">SEE PRODUCT</button>
+          <NavLink to="/xx99-mark-two-headphones" exact><button type="button" className="button button1">SEE PRODUCT</button></NavLink>
         </div>
         <div className="Homepage-Hero-image" />
       </div>
@@ -28,13 +29,13 @@ const Homepage = () => (
           <p>Upgrade to premium speakers that are phenomenally
             built to deliver truly remarkable sound.
           </p>
-          <button type="button" className="button button2-reverse">SEE PRODUCT</button>
+          <NavLink to="/zx9-speaker" exact><button type="button" className="button button2-reverse">SEE PRODUCT</button></NavLink>
         </div>
       </div>
       <div className="HeadlineProducts-ZX7">
         <div className="HeadlineProducts-ZX7-desc">
           <h4>ZX7 SPEAKER</h4>
-          <button className="button button2" type="button">SEE PRODUCT</button>
+          <NavLink to="/zx7-speaker" exact><button className="button button2" type="button">SEE PRODUCT</button></NavLink>
         </div>
       </div>
       <div className="HeadlineProducts-YX1">
@@ -42,7 +43,7 @@ const Homepage = () => (
         <div className="HeadlineProducts-YX1-desc">
           <div className="HeadlineProducts-YX1-desc-wrap">
             <h4>YX1 EARPHONES</h4>
-            <button className="button button2" type="button">SEE PRODUCT</button>
+            <NavLink to="/yx1-earphones" exact><button className="button button2" type="button">SEE PRODUCT</button></NavLink>
           </div>
         </div>
       </div>

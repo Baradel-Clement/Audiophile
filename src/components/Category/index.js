@@ -38,7 +38,7 @@ const Category = ({
                 <p className="overline">{product.new ? 'NEW PRODUCT' : ''}</p>
                 <h2>{product.name}</h2>
                 <p>{product.description}</p>
-                <button type="button" className="button button1"><NavLink to={`/${product.slug}`} exact>SEE PRODUCT</NavLink></button>
+                <NavLink to={`/${product.slug}`} exact><button type="button" className="button button1">SEE PRODUCT</button></NavLink>
               </div>
             </div>
           ))

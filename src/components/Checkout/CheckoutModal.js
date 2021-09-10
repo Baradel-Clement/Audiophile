@@ -64,7 +64,7 @@ const CheckoutModal = ({
         </div>
       </div>
     </div>
-    <button type="button" className="button button1"><NavLink onClick={() => setDisplayMask(false, '')} to="/" exact>BACK TO HOME</NavLink></button>
+    <NavLink onClick={() => setDisplayMask(false, '')} to="/" exact><button type="button" className="button button1">BACK TO HOME</button></NavLink>
   </div>
 );
 

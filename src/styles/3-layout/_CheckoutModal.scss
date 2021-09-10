@@ -97,8 +97,11 @@
   flex-flow: column;
 }
 
-.CheckoutModal > button {
+.CheckoutModal > a {
   align-self: center;
+  width: 100%;
+}
+.CheckoutModal > a > button {
   width: 100%;
 }
 

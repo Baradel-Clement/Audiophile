@@ -15,10 +15,12 @@
   align-self: flex-start;
   margin-bottom: 80px;
   cursor: pointer;
+  transition: 0.2s color;
 }
 
 .Product-wrap > p:first-child:hover {
   text-decoration: underline;
+  color: $orange;
 }
 
 // ---- PRODUCT MAIN ----

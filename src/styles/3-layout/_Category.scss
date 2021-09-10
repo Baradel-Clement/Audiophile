@@ -53,6 +53,11 @@
     flex-flow: row-reverse;
 }
 
+.Category-product-desc > a {
+    width: 160px;
+    @extend %flex-center-center;
+}
+
 @media screen and (max-width: 1160px) {
     .Category-title {
         height: 247px;

@@ -111,42 +111,46 @@ const NavBar = ({
                 <img src={headphonesCategoryIcon} alt="headphonesCategoryIcon" />
                 <span className="Menu-category-shadow" />
                 <p className="Menu-category-title">HEADPHONES</p>
-                <button className="button button3" type="button"><NavLink
+                <NavLink to="/headphones" exact><button
                   onClick={() => {
                     setDisplayMenu(false);
                     setDisplayMask(false);
                   }}
-                  to="/headphones"
-                  exact
-                >SHOP
-                </NavLink><span style={{ backgroundImage: `url(${rightArrow})` }} />
+                  className="button button3"
+                  type="button"
+                >SHOP<span style={{ backgroundImage: `url(${rightArrow})` }} />
                 </button>
+                </NavLink>
               </div>
               <div className="Menu-category">
                 <img src={speakersCategoryIcon} alt="speakersCategoryIcon" />
                 <span className="Menu-category-shadow" />
                 <p className="Menu-category-title">SPEAKERS</p>
-                <button className="button button3" type="button"><NavLink
+                <NavLink to="/speakers" exact><button
                   onClick={() => {
                     setDisplayMenu(false);
                     setDisplayMask(false);
                   }}
-                  to="/speakers"
-                  exact
-                >SHOP</NavLink><span style={{ backgroundImage: `url(${rightArrow})` }} /></button>
+                  className="button button3"
+                  type="button"
+                >SHOP<span style={{ backgroundImage: `url(${rightArrow})` }} />
+                </button>
+                </NavLink>
               </div>
               <div className="Menu-category">
                 <img src={earphonesCategoryIcon} alt="earphonesCategoryIcon" />
                 <span className="Menu-category-shadow" />
                 <p className="Menu-category-title">EARPHONES</p>
-                <button className="button button3" type="button"><NavLink
+                <NavLink to="/earphones" exact><button
                   onClick={() => {
                     setDisplayMenu(false);
                     setDisplayMask(false);
                   }}
-                  to="/earphones"
-                  exact
-                >SHOP</NavLink><span style={{ backgroundImage: `url(${rightArrow})` }} /></button>
+                  className="button button3"
+                  type="button"
+                >SHOP<span style={{ backgroundImage: `url(${rightArrow})` }} />
+                </button>
+                </NavLink>
               </div>
             </div>
           </div>

@@ -79,7 +79,7 @@ const Product = ({ product, addCart }) => {
                     <img src={`/AudiophileAssets/${other.image.desktop}`} alt={`${other.name} `} />
                   </picture>
                   <h5>{other.name}</h5>
-                  <button type="button" className="button button1"><NavLink to={other.slug} exact>SEE PRODUCT</NavLink></button>
+                  <NavLink to={other.slug} exact><button type="button" className="button button1">SEE PRODUCT</button></NavLink>
                 </div>
               ))
             }

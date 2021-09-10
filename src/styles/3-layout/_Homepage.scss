@@ -23,6 +23,11 @@
   margin-top: 128px;
 }
 
+.Homepage-Hero-desc > a {
+  @extend %flex-center-center;
+  width: 160px;
+}
+
 .Homepage-Hero-desc > p.overline {
   color: white;
   opacity: 0.5;
