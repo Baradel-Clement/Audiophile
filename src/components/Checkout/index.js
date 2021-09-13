@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import CheckoutForm from '../../containers/Checkout/CheckoutForm';
 import CheckoutModal from '../../containers/Checkout/CheckoutModal';
+import { topFunction } from '../../utils';
 
 const Checkout = ({
   productsInCheckout,
@@ -62,9 +63,11 @@ const Checkout = ({
             </div>
             <button
               className={`button button1 Checkout-summary-button ${isCheckoutFormValid === false ? 'button-disable' : ''}`}
+              disabled={!isCheckoutFormValid}
               type="submit"
               form="CheckoutForm"
               onClick={() => {
+                topFunction();
                 displayCheckoutModal();
                 setDisplayMask(true, '');
               }}

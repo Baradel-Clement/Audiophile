@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import { topFunction } from '../../utils';
 
 const Cart = ({
   productsInCart,
@@ -60,10 +61,12 @@ const Cart = ({
         </div>
         <NavLink to="/checkout" exact><button
           onClick={() => {
+            topFunction();
             setDisplayCart(false);
             setDisplayMask(false);
           }}
-          className="button button1 Cart-checkout-button"
+          className={`button button1 Cart-checkout-button ${totalProduct === 0 ? 'button-disable' : ''}`}
+          disabled={totalProduct === 0 ? 'button-disable' : ''}
           type="button"
         >CHECKOUT
         </button>

@@ -11,6 +11,7 @@ import speakersCategoryIcon from '../../assets/AudiophileAssets/category-speaker
 import earphonesCategoryIcon from '../../assets/AudiophileAssets/category-earphones/mobile/image-removebg-preview(42).png';
 import rightArrow from '../../assets/AudiophileAssets/shared/desktop/icon-arrow-right.svg';
 import Cart from '../../containers/Cart';
+import { topFunction } from '../../utils';
 
 const NavBar = ({
   setDisplayCart,
@@ -42,13 +43,14 @@ const NavBar = ({
           }}
           className="NavBar-logo"
         >
-          <NavLink to="/" exact>
+          <NavLink onClick={() => topFunction()} to="/" exact>
             <img src={logo} alt="logo" />
           </NavLink>
         </div>
         <ul className="NavBar-links">
           <NavLink
             onClick={() => {
+              topFunction();
               setDisplayCart(false);
               setDisplayMask(false, '');
             }}
@@ -58,6 +60,7 @@ const NavBar = ({
           </NavLink>
           <NavLink
             onClick={() => {
+              topFunction();
               setDisplayCart(false);
               setDisplayMask(false, '');
             }}
@@ -67,6 +70,7 @@ const NavBar = ({
           </NavLink>
           <NavLink
             onClick={() => {
+              topFunction();
               setDisplayCart(false);
               setDisplayMask(false, '');
             }}
@@ -76,6 +80,7 @@ const NavBar = ({
           </NavLink>
           <NavLink
             onClick={() => {
+              topFunction();
               setDisplayCart(false);
               setDisplayMask(false, '');
             }}
@@ -111,7 +116,7 @@ const NavBar = ({
                 <img src={headphonesCategoryIcon} alt="headphonesCategoryIcon" />
                 <span className="Menu-category-shadow" />
                 <p className="Menu-category-title">HEADPHONES</p>
-                <NavLink to="/headphones" exact><button
+                <NavLink onClick={() => topFunction()} to="/headphones" exact><button
                   onClick={() => {
                     setDisplayMenu(false);
                     setDisplayMask(false);
@@ -126,7 +131,7 @@ const NavBar = ({
                 <img src={speakersCategoryIcon} alt="speakersCategoryIcon" />
                 <span className="Menu-category-shadow" />
                 <p className="Menu-category-title">SPEAKERS</p>
-                <NavLink to="/speakers" exact><button
+                <NavLink onClick={() => topFunction()} to="/speakers" exact><button
                   onClick={() => {
                     setDisplayMenu(false);
                     setDisplayMask(false);
@@ -141,7 +146,7 @@ const NavBar = ({
                 <img src={earphonesCategoryIcon} alt="earphonesCategoryIcon" />
                 <span className="Menu-category-shadow" />
                 <p className="Menu-category-title">EARPHONES</p>
-                <NavLink to="/earphones" exact><button
+                <NavLink onClick={() => topFunction()} to="/earphones" exact><button
                   onClick={() => {
                     setDisplayMenu(false);
                     setDisplayMask(false);

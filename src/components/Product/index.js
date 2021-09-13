@@ -5,6 +5,7 @@ import { NavLink, useHistory } from 'react-router-dom';
 import Categories from '../Categories';
 import Best from '../Best';
 import ProductQuantityCountAddCart from '../../containers/ProductQuantityCountAddCart';
+import { topFunction } from '../../utils';
 
 const Product = ({ product, addCart }) => {
   const history = useHistory();
@@ -79,7 +80,7 @@ const Product = ({ product, addCart }) => {
                     <img src={`/AudiophileAssets/${other.image.desktop}`} alt={`${other.name} `} />
                   </picture>
                   <h5>{other.name}</h5>
-                  <NavLink to={other.slug} exact><button type="button" className="button button1">SEE PRODUCT</button></NavLink>
+                  <NavLink onClick={() => topFunction()} to={other.slug} exact><button type="button" className="button button1">SEE PRODUCT</button></NavLink>
                 </div>
               ))
             }

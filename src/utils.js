@@ -11,3 +11,7 @@ export const validateZip = (input) => {
     return true;
   } return false;
 };
+
+export const topFunction = () => {
+  document.documentElement.scrollTop = 0;
+};

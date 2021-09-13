@@ -2,21 +2,22 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import logo from '../../assets/AudiophileAssets/shared/desktop/logo.svg';
+import { topFunction } from '../../utils';
 
 const Footer = () => (
   <div className="Footer">
     <div className="Footer-wrap">
       <span className="orangeRectangle" />
       <div className="Footer-logo">
-        <NavLink to="/" exact>
+        <NavLink onClick={() => topFunction()} to="/" exact>
           <img src={logo} alt="logo" />
         </NavLink>
       </div>
       <ul className="Footer-nav">
-        <NavLink to="/" exact><li className="Footer-link Nav-link">HOME</li></NavLink>
-        <NavLink to="/headphones" exact><li className="Footer-link Nav-link">HEADPHONES</li></NavLink>
-        <NavLink to="/speakers" exact><li className="Footer-link Nav-link">SPEAKERS</li></NavLink>
-        <NavLink to="/earphones" exact><li className="Footer-link Nav-link">EARPHONES</li></NavLink>
+        <NavLink onClick={() => topFunction()} to="/" exact><li className="Footer-link Nav-link">HOME</li></NavLink>
+        <NavLink onClick={() => topFunction()} to="/headphones" exact><li className="Footer-link Nav-link">HEADPHONES</li></NavLink>
+        <NavLink onClick={() => topFunction()} to="/speakers" exact><li className="Footer-link Nav-link">SPEAKERS</li></NavLink>
+        <NavLink onClick={() => topFunction()} to="/earphones" exact><li className="Footer-link Nav-link">EARPHONES</li></NavLink>
       </ul>
       <div className="Footer-text">
         <p>Audiophile is an all in one stop to fulfill your audio needs.

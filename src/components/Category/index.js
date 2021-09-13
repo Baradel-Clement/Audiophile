@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 import Categories from '../Categories';
 import Best from '../Best';
+import { topFunction } from '../../utils';
 
 const Category = ({
   name, slug, products,
@@ -38,7 +39,7 @@ const Category = ({
                 <p className="overline">{product.new ? 'NEW PRODUCT' : ''}</p>
                 <h2>{product.name}</h2>
                 <p>{product.description}</p>
-                <NavLink to={`/${product.slug}`} exact><button type="button" className="button button1">SEE PRODUCT</button></NavLink>
+                <NavLink onClick={() => topFunction()} to={`/${product.slug}`} exact><button type="button" className="button button1">SEE PRODUCT</button></NavLink>
               </div>
             </div>
           ))
