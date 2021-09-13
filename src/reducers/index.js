@@ -1,4 +1,5 @@
 import products from '../assets/AudiophileAssets/data';
+console.log(products);
 
 import {
   PRESS_MINUS_ADDCART_COUNT,

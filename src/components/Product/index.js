@@ -17,7 +17,7 @@ const Product = ({ product, addCart }) => {
           <div className="Product-main-illu">
             <picture>
               <source media="(max-width: 768px)" srcSet={`/AudiophileAssets/${product.image.mobile}`} />
-              <source media="(max-width: 1160px)" srcSet={`/AudiophileAssets/${product.image.tablet}`} />
+              <source media="(max-width: 1160px)" srcSet={`/AudiophileAssets/${product.image.tabletVertical}`} />
               <img src={`/AudiophileAssets/${product.image.desktop}`} alt={`${product.name}`} />
             </picture>
           </div>
@@ -100,6 +100,7 @@ Product.propTypes = {
     image: PropTypes.shape({
       mobile: PropTypes.string.isRequired,
       tablet: PropTypes.string.isRequired,
+      tabletVertical: PropTypes.string.isRequired,
       desktop: PropTypes.string.isRequired,
     }).isRequired,
     new: PropTypes.bool.isRequired,
