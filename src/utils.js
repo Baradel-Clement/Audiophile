@@ -15,3 +15,13 @@ export const validateZip = (input) => {
 export const topFunction = () => {
   document.documentElement.scrollTop = 0;
 };
+
+export const checkMediaDevice = (isMobile, isTablet) => {
+  if (isMobile) {
+    return 'mobile';
+  }
+  if (isMobile === false && isTablet) {
+    return 'tablet';
+  }
+  return 'desktop';
+};

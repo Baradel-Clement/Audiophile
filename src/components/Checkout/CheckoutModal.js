@@ -5,7 +5,13 @@ import { NavLink } from 'react-router-dom';
 import iconCheckoutModal from '../../assets/AudiophileAssets/shared/desktop/icon-checkout-modal.svg';
 
 const CheckoutModal = ({
-  totalPrice, productsPurchased, totalProduct, viewMore, displayViewMore, setDisplayMask,
+  totalPrice,
+  productsPurchased,
+  totalProduct,
+  viewMore,
+  displayViewMore,
+  setDisplayMask,
+  mediaDevice,
 }) => (
   <div className="CheckoutModal">
     <img src={iconCheckoutModal} alt="iconCheckoutModal" />
@@ -57,7 +63,7 @@ const CheckoutModal = ({
           )
         }
       </div>
-      <div style={{ height: viewMore === true && (window.matchMedia('screen and (max-width: 768px)').matches) === false ? 139 + (66 * (productsPurchased.length - 1)) : 139 }} className="CheckoutModal-recap-price">
+      <div style={{ height: viewMore === true && (mediaDevice === 'tablet' || 'desktop') ? 139 + (66 * (productsPurchased.length - 1)) : 139 }} className="CheckoutModal-recap-price">
         <div className="CheckoutModal-recap-price-wrap">
           <p className="weight200 opacity white">GRAND TOTAL</p>
           <h6 className="white">$ {totalPrice + 50}</h6>
@@ -82,6 +88,7 @@ CheckoutModal.propTypes = {
   viewMore: PropTypes.bool.isRequired,
   displayViewMore: PropTypes.func.isRequired,
   setDisplayMask: PropTypes.func.isRequired,
+  mediaDevice: PropTypes.string.isRequired,
 };
 
 export default CheckoutModal;

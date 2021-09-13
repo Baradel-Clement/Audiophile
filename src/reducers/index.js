@@ -18,6 +18,7 @@ import {
   DISPLAY_MODAL_VIEW_MORE,
   SET_DISPLAY_MASK,
   SET_DISPLAY_MENU,
+  CHANGE_MEDIA_DEVICE,
 } from '../actions';
 
 const initialState = {
@@ -39,6 +40,7 @@ const initialState = {
   addCartQuantityCount: 1,
   displayMenu: false,
   displayMask: false,
+  mediaDevice: '',
   cart: {
     products: [],
     totalPrice: 0,
@@ -261,6 +263,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         displayMenu: action.displayMenu,
+      };
+    case CHANGE_MEDIA_DEVICE:
+      return {
+        ...state,
+        mediaDevice: action.mediaDevice,
       };
     default:
       return { ...state };

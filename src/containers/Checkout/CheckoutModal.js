@@ -12,6 +12,7 @@ const mapStateToProps = (state) => ({
   productsPurchased: state.cart.products,
   totalProduct: state.cart.totalProduct,
   viewMore: state.checkout.modalViewMore,
+  mediaDevice: state.mediaDevice,
 });
 
 const mapDispatchToProps = (dispatch) => ({

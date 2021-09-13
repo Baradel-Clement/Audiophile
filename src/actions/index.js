@@ -15,6 +15,7 @@ export const DISPLAY_CHECKOUT_MODAL = 'DISPLAY_CHECKOUT_MODAL';
 export const DISPLAY_MODAL_VIEW_MORE = 'DISPLAY_MODAL_VIEW_MORE';
 export const SET_DISPLAY_MASK = 'SET_DISPLAY_MASK';
 export const SET_DISPLAY_MENU = 'SET_DISPLAY_MENU';
+export const CHANGE_MEDIA_DEVICE = 'CHANGE_MEDIA_DEVICE';
 
 export const pressMinusAddCartCount = () => ({
   type: PRESS_MINUS_ADDCART_COUNT,
@@ -93,4 +94,9 @@ export const setDisplayMask = (displayMask, triggeredFrom) => ({
 export const setDisplayMenu = (displayMenu) => ({
   type: SET_DISPLAY_MENU,
   displayMenu,
+});
+
+export const changeMediaDevice = (mediaDevice) => ({
+  type: CHANGE_MEDIA_DEVICE,
+  mediaDevice,
 });
