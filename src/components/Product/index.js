@@ -80,7 +80,7 @@ const Product = ({ product, addCart }) => {
                     <img src={`/AudiophileAssets/${other.image.desktop}`} alt={`${other.name} `} />
                   </picture>
                   <h5>{other.name}</h5>
-                  <NavLink onClick={() => topFunction()} to={other.slug} exact><button type="button" className="button button1">SEE PRODUCT</button></NavLink>
+                  <NavLink className="button button1" onClick={() => topFunction()} to={other.slug} exact>SEE PRODUCT</NavLink>
                 </div>
               ))
             }

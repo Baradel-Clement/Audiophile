@@ -59,17 +59,16 @@ const Cart = ({
           <p>TOTAL</p>
           <h6>$ {totalPrice}</h6>
         </div>
-        <NavLink to="/checkout" exact><button
+        <NavLink
           onClick={() => {
             topFunction();
             setDisplayCart(false);
             setDisplayMask(false);
           }}
+          to="/checkout"
+          exact
           className={`button button1 Cart-checkout-button ${totalProduct === 0 ? 'button-disable' : ''}`}
-          disabled={totalProduct === 0 ? 'button-disable' : ''}
-          type="button"
         >CHECKOUT
-        </button>
         </NavLink>
       </div>
     </div>

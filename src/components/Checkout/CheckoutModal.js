@@ -70,7 +70,7 @@ const CheckoutModal = ({
         </div>
       </div>
     </div>
-    <NavLink onClick={() => setDisplayMask(false, '')} to="/" exact><button type="button" className="button button1">BACK TO HOME</button></NavLink>
+    <NavLink className="button button1" onClick={() => setDisplayMask(false, '')} to="/" exact>BACK TO HOME</NavLink>
   </div>
 );
 

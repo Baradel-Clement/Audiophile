@@ -48,46 +48,58 @@ const NavBar = ({
           </NavLink>
         </div>
         <ul className="NavBar-links">
-          <NavLink
+          <li
             onClick={() => {
               topFunction();
               setDisplayCart(false);
               setDisplayMask(false, '');
             }}
-            to="/"
-            exact
-          ><li className="NavBar-link Nav-link">HOME</li>
-          </NavLink>
-          <NavLink
+            className="NavBar-link"
+          >
+            <NavLink
+              className="Nav-link"
+              to="/"
+              exact
+            >HOME</NavLink></li>
+          <li
             onClick={() => {
               topFunction();
               setDisplayCart(false);
               setDisplayMask(false, '');
             }}
-            to="/headphones"
-            exact
-          ><li className="NavBar-link Nav-link">HEADPHONES</li>
-          </NavLink>
-          <NavLink
+            className="NavBar-link"
+          >
+            <NavLink
+              className="Nav-link"
+              to="/headphones"
+              exact
+            >HEADPHONES</NavLink></li>
+          <li
             onClick={() => {
               topFunction();
               setDisplayCart(false);
               setDisplayMask(false, '');
             }}
-            to="/speakers"
-            exact
-          ><li className="NavBar-link Nav-link">SPEAKERS</li>
-          </NavLink>
-          <NavLink
+            className="NavBar-link"
+          >
+            <NavLink
+              className="Nav-link"
+              to="/speakers"
+              exact
+            >SPEAKERS</NavLink></li>
+          <li
             onClick={() => {
               topFunction();
               setDisplayCart(false);
               setDisplayMask(false, '');
             }}
-            to="/earphones"
-            exact
-          ><li className="NavBar-link Nav-link">EARPHONES</li>
-          </NavLink>
+            className="NavBar-link"
+          >
+            <NavLink
+              className="Nav-link"
+              to="/earphones"
+              exact
+            >EARPHONES</NavLink></li>
         </ul>
         <div className="NavBar-cart">
           {
@@ -116,45 +128,48 @@ const NavBar = ({
                 <img src={headphonesCategoryIcon} alt="headphonesCategoryIcon" />
                 <span className="Menu-category-shadow" />
                 <p className="Menu-category-title">HEADPHONES</p>
-                <NavLink onClick={() => topFunction()} to="/headphones" exact><button
+                <NavLink
                   onClick={() => {
+                    topFunction();
                     setDisplayMenu(false);
                     setDisplayMask(false);
                   }}
                   className="button button3"
-                  type="button"
+                  to="/headphones"
+                  exact
                 >SHOP<span style={{ backgroundImage: `url(${rightArrow})` }} />
-                </button>
                 </NavLink>
               </div>
               <div className="Menu-category">
                 <img src={speakersCategoryIcon} alt="speakersCategoryIcon" />
                 <span className="Menu-category-shadow" />
                 <p className="Menu-category-title">SPEAKERS</p>
-                <NavLink onClick={() => topFunction()} to="/speakers" exact><button
+                <NavLink
                   onClick={() => {
+                    topFunction();
                     setDisplayMenu(false);
                     setDisplayMask(false);
                   }}
                   className="button button3"
-                  type="button"
+                  to="/speakers"
+                  exact
                 >SHOP<span style={{ backgroundImage: `url(${rightArrow})` }} />
-                </button>
                 </NavLink>
               </div>
               <div className="Menu-category">
                 <img src={earphonesCategoryIcon} alt="earphonesCategoryIcon" />
                 <span className="Menu-category-shadow" />
                 <p className="Menu-category-title">EARPHONES</p>
-                <NavLink onClick={() => topFunction()} to="/earphones" exact><button
+                <NavLink
                   onClick={() => {
+                    topFunction();
                     setDisplayMenu(false);
                     setDisplayMask(false);
                   }}
                   className="button button3"
-                  type="button"
+                  to="/earphones"
+                  exact
                 >SHOP<span style={{ backgroundImage: `url(${rightArrow})` }} />
-                </button>
                 </NavLink>
               </div>
             </div>

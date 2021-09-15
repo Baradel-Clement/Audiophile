@@ -14,10 +14,10 @@ const Footer = () => (
         </NavLink>
       </div>
       <ul className="Footer-nav">
-        <NavLink onClick={() => topFunction()} to="/" exact><li className="Footer-link Nav-link">HOME</li></NavLink>
-        <NavLink onClick={() => topFunction()} to="/headphones" exact><li className="Footer-link Nav-link">HEADPHONES</li></NavLink>
-        <NavLink onClick={() => topFunction()} to="/speakers" exact><li className="Footer-link Nav-link">SPEAKERS</li></NavLink>
-        <NavLink onClick={() => topFunction()} to="/earphones" exact><li className="Footer-link Nav-link">EARPHONES</li></NavLink>
+        <li onClick={() => topFunction()} className="Footer-link"><NavLink className="Nav-link" to="/" exact>HOME</NavLink></li>
+        <li onClick={() => topFunction()} className="Footer-link"><NavLink className="Nav-link" to="/headphones" exact>HEADPHONES</NavLink></li>
+        <li onClick={() => topFunction()} className="Footer-link"><NavLink className="Nav-link" to="/speakers" exact>SPEAKERS</NavLink></li>
+        <li onClick={() => topFunction()} className="Footer-link"><NavLink className="Nav-link" to="/earphones" exact>EARPHONES</NavLink></li>
       </ul>
       <div className="Footer-text">
         <p>Audiophile is an all in one stop to fulfill your audio needs.

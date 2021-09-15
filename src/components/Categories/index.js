@@ -19,21 +19,21 @@ const Categories = ({ id }) => (
       <img src={headphonesCategoryIconMobile} alt="headphonesCategoryIconMobile" />
       <span className="Categories-category-shadow" />
       <p className="Categories-category-title">HEADPHONES</p>
-      <NavLink onClick={() => topFunction()} to="/headphones" exact><button className="button button3" type="button">SHOP<span style={{ backgroundImage: `url(${rightArrow})` }} /></button></NavLink>
+      <NavLink className="button button3" onClick={() => topFunction()} to="/headphones" exact>SHOP<span style={{ backgroundImage: `url(${rightArrow})` }} /></NavLink>
     </div>
     <div className="Categories-category">
       <img src={speakersCategoryIconDesktop} alt="speakersCategoryIconDesktop" />
       <img src={speakersCategoryIconMobile} alt="speakersCategoryIconMobile" />
       <span className="Categories-category-shadow" />
       <p className="Categories-category-title">SPEAKERS</p>
-      <NavLink onClick={() => topFunction()} to="/speakers" exact><button className="button button3" type="button">SHOP<span style={{ backgroundImage: `url(${rightArrow})` }} /></button></NavLink>
+      <NavLink className="button button3" onClick={() => topFunction()} to="/speakers" exact>SHOP<span style={{ backgroundImage: `url(${rightArrow})` }} /></NavLink>
     </div>
     <div className="Categories-category">
       <img src={earphonesCategoryIconDesktop} alt="earphonesCategoryIconDesktop" />
       <img src={earphonesCategoryIconMobile} alt="earphonesCategoryIconMobile" />
       <span className="Categories-category-shadow" />
       <p className="Categories-category-title">EARPHONES</p>
-      <NavLink onClick={() => topFunction()} to="/earphones" exact><button className="button button3" type="button">SHOP<span style={{ backgroundImage: `url(${rightArrow})` }} /></button></NavLink>
+      <NavLink className="button button3" onClick={() => topFunction()} to="/earphones" exact>SHOP<span style={{ backgroundImage: `url(${rightArrow})` }} /></NavLink>
     </div>
   </div>
 );

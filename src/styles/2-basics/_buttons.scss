@@ -52,6 +52,10 @@
   opacity: 1;
 }
 
+a.button3 {
+  width: 57px;
+}
+
 .button2-reverse {
   background-color: black;
   border: none;
@@ -69,7 +73,7 @@
 
 .button-disable {
   opacity: 0.5;
-  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .button.button-disable:hover {

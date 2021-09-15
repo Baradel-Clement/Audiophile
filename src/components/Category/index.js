@@ -39,7 +39,7 @@ const Category = ({
                 <p className="overline">{product.new ? 'NEW PRODUCT' : ''}</p>
                 <h2>{product.name}</h2>
                 <p>{product.description}</p>
-                <NavLink onClick={() => topFunction()} to={`/${product.slug}`} exact><button type="button" className="button button1">SEE PRODUCT</button></NavLink>
+                <NavLink className="button button1" onClick={() => topFunction()} to={`/${product.slug}`} exact>SEE PRODUCT</NavLink>
               </div>
             </div>
           ))
