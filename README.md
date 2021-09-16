@@ -55,4 +55,5 @@ Users should be able to:
 ## Author
 
 - Website - [Clément Baradel](http://baradelclement.com/)
+- Linkedin - [BaradelClément](https://www.linkedin.com/in/cl%C3%A9ment-baradel-330460209)
 - Frontend Mentor - [@Koyazh](https://www.frontendmentor.io/profile/Koyazh)
